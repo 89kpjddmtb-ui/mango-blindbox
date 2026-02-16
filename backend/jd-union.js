@@ -107,7 +107,7 @@ async function queryGoodsBySku(skuIds) {
  * @param {string} siteId 推广位ID
  * @returns {Promise<string>} 推广链接
  */
-async function generatePromotionLink(materialId, siteId = '4103347364') {
+async function generatePromotionLink(materialId, siteId = '3103720426') {
   const result = await callJDApi('jd.union.open.promotion.common.get', {
     promotionCodeReq: JSON.stringify({
       materialId: materialId,
