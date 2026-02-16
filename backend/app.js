@@ -27,25 +27,16 @@ let analytics = {
 // 数据持久化
 async function loadData() {
   try {
-    // 首先尝试从项目根目录复制历史数据（如果存在）
+    // 首先尝试从项目根目录复制历史数据（强制恢复）
     const rootDataFile = path.join(__dirname, '../data.json');
     try {
       const rootData = await fs.readFile(rootDataFile, 'utf8');
       const rootAnalytics = JSON.parse(rootData);
-      // 如果 Volume 中没有数据或数据为空，则使用根目录数据
-      let volumeData = { visits: [], messages: [], selections: [], clicks: [] };
-      try {
-        const volData = await fs.readFile(DATA_FILE, 'utf8');
-        volumeData = JSON.parse(volData);
-      } catch (e) {
-        // Volume 中没有数据，将使用根目录数据
-      }
-      
-      // 合并数据：优先使用非空的 Volume 数据，否则用根目录数据
-      if (volumeData.visits.length === 0 && rootAnalytics.visits.length > 0) {
+      // 只要有历史数据就恢复到 Volume
+      if (rootAnalytics.visits && rootAnalytics.visits.length > 0) {
         analytics = rootAnalytics;
         await fs.writeFile(DATA_FILE, JSON.stringify(analytics, null, 2));
-        console.log('📊 已从根目录恢复历史数据');
+        console.log(`📊 已从根目录恢复历史数据: ${analytics.visits.length}条访问记录`);
         return;
       }
     } catch (rootErr) {
