@@ -7,7 +7,9 @@ const { generatePromotionLink, searchGoods } = require('./jd-union');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DATA_FILE = path.join(__dirname, 'data.json');
+// 使用环境变量指定数据目录，Railway 可挂载 Volume 持久化
+const DATA_DIR = process.env.DATA_DIR || __dirname;
+const DATA_FILE = path.join(DATA_DIR, 'data.json');
 
 // 登录配置 - 从环境变量读取，提供默认值
 const ADMIN_USERNAME = process.env.ADMIN_USER || 'admin';
