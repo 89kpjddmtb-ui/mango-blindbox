@@ -27,20 +27,20 @@ let analytics = {
 // 数据持久化
 async function loadData() {
   try {
-    // 首先尝试从项目根目录复制历史数据（强制恢复）
-    const rootDataFile = path.join(__dirname, '../data.json');
+    // 首先尝试从历史数据文件恢复
+    const historyDataFile = path.join(__dirname, 'history-data.json');
     try {
-      const rootData = await fs.readFile(rootDataFile, 'utf8');
-      const rootAnalytics = JSON.parse(rootData);
+      const historyData = await fs.readFile(historyDataFile, 'utf8');
+      const historyAnalytics = JSON.parse(historyData);
       // 只要有历史数据就恢复到 Volume
-      if (rootAnalytics.visits && rootAnalytics.visits.length > 0) {
-        analytics = rootAnalytics;
+      if (historyAnalytics.visits && historyAnalytics.visits.length > 0) {
+        analytics = historyAnalytics;
         await fs.writeFile(DATA_FILE, JSON.stringify(analytics, null, 2));
-        console.log(`📊 已从根目录恢复历史数据: ${analytics.visits.length}条访问记录`);
+        console.log(`📊 已恢复历史数据: ${analytics.visits.length}条访问记录`);
         return;
       }
-    } catch (rootErr) {
-      // 根目录没有数据文件，继续正常加载
+    } catch (historyErr) {
+      // 历史数据文件不存在，继续正常加载
     }
     
     const data = await fs.readFile(DATA_FILE, 'utf8');
