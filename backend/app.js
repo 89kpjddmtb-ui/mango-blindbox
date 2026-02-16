@@ -103,11 +103,14 @@ app.use('/admin', (req, res, next) => {
   next();
 });
 
-// 静态文件服务 - 只提供前端必要文件
+// 静态文件服务 - 图片资源
+const imagesPath = path.join(__dirname, '../product-images');
+app.use('/images', express.static(imagesPath));
+
+// 根路径重定向到 Vercel 前端
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.redirect('https://mangguojingling.vercel.app');
 });
-app.use('/images', express.static(path.join(__dirname, '../product-images')));
 
 // ==================== 京东联盟配置（已移至 jd-union.js）====================
 
