@@ -3,6 +3,7 @@ const cors = require('cors');
 const fs = require('fs').promises;
 const path = require('path');
 const { promotionLinks, getPromotionUrl } = require('./promotion-links');
+const { generatePromotionLink, searchGoods } = require('./jd-union');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -151,7 +152,7 @@ app.get('/api/gifts', (req, res) => {
   });
 });
 
-// 生成京东推广链接（通过SKU）
+// 生成京东推广链接（通过SKU）- 使用京东联盟API实时生成
 app.post('/api/jd-link', async (req, res) => {
   try {
     const { sku, name, price } = req.body;
@@ -160,8 +161,11 @@ app.post('/api/jd-link', async (req, res) => {
       return res.status(400).json({ success: false, error: '缺少商品SKU' });
     }
     
-    // 从数据库获取推广链接
-    const promotionUrl = getPromotionUrl(sku);
+    // 构建商品详情页URL作为物料ID
+    const materialId = `https://item.jd.com/${sku}.html`;
+    
+    // 调用京东联盟API生成实时推广链接
+    const promotionUrl = await generatePromotionLink(materialId);
     
     if (promotionUrl) {
       res.json({
@@ -171,31 +175,62 @@ app.post('/api/jd-link', async (req, res) => {
           sku,
           name,
           price,
-          isPromotion: promotionUrl.includes('union-click.jd.com'), // 标记是否为推广链接
-          note: promotionUrl.includes('union-click.jd.com') 
-            ? '使用联盟推广链接' 
-            : '使用商品详情页（请先填入推广链接）'
+          isPromotion: true,
+          note: '使用京东联盟API实时生成的推广链接'
         }
       });
     } else {
-      // 找不到SKU，用搜索兜底
-      const searchUrl = `https://search.jd.com/Search?keyword=${encodeURIComponent(name || sku)}&enc=utf-8`;
-      res.json({
-        success: true,
-        data: {
-          url: searchUrl,
-          sku,
-          name,
-          price,
-          isPromotion: false,
-          note: '使用搜索链接（商品未配置）'
-        }
-      });
+      // API生成失败，使用静态链接兜底
+      const staticUrl = getPromotionUrl(sku);
+      if (staticUrl) {
+        res.json({
+          success: true,
+          data: {
+            url: staticUrl,
+            sku,
+            name,
+            price,
+            isPromotion: true,
+            note: '使用静态推广链接（API生成失败）'
+          }
+        });
+      } else {
+        // 完全找不到，用搜索兜底
+        const searchUrl = `https://search.jd.com/Search?keyword=${encodeURIComponent(name || sku)}&enc=utf-8`;
+        res.json({
+          success: true,
+          data: {
+            url: searchUrl,
+            sku,
+            name,
+            price,
+            isPromotion: false,
+            note: '使用搜索链接（商品未配置）'
+          }
+        });
+      }
     }
     
   } catch (error) {
     console.error('生成链接错误:', error);
-    res.status(500).json({ success: false, error: '生成链接失败' });
+    // 出错时返回静态链接
+    const { sku, name, price } = req.body;
+    const staticUrl = getPromotionUrl(sku);
+    if (staticUrl) {
+      res.json({
+        success: true,
+        data: {
+          url: staticUrl,
+          sku,
+          name,
+          price,
+          isPromotion: true,
+          note: '使用静态推广链接（API调用异常）'
+        }
+      });
+    } else {
+      res.status(500).json({ success: false, error: '生成链接失败' });
+    }
   }
 });
 
