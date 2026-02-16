@@ -41,10 +41,11 @@ async function saveData() {
   }
 }
 
-// 中间件 - CORS 限制只允许 GitHub Pages 和本地开发
+// 中间件 - CORS 限制只允许指定域名
 const corsOptions = {
   origin: [
     'https://89kpjddmtb-ui.github.io',
+    'https://mangguojingling.vercel.app',
     'http://localhost:3000',
     'http://localhost:8080'
   ],
