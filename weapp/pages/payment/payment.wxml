@@ -1,0 +1,77 @@
+/**payment.wxml**/
+<view class="container">
+  <view class="success-animation" wx:if="{{showSuccess}}">
+    <view class="checkmark">✓</view>
+    <text class="success-text">支付成功！</text>
+  </view>
+  
+  <view class="payment-card" wx:if="{{!showSuccess}}">
+    <view class="card-header">
+      <text class="card-title">订单确认</text>
+    </view>
+    
+    <view class="gift-summary">
+      <view class="gift-icon">🎁</view>
+      <view class="gift-info">
+        <text class="gift-name">{{gift.name}}</text>
+        <text class="gift-desc">{{gift.desc}}</text>
+        <view class="platform-tag">{{gift.platform}}</view>
+      </view>
+    </view>
+    
+    <view class="price-breakdown">
+      <view class="price-row">
+        <text class="price-label">商品价格</text>
+        <text class="price-value">¥{{gift.price}}</text>
+      </view>
+      <view class="price-row">
+        <text class="price-label">服务费</text>
+        <text class="price-value">¥1.00</text>
+      </view>
+      <view class="price-row total">
+        <text class="price-label">实付金额</text>
+        <text class="price-total">¥{{totalPrice}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="payment-methods" wx:if="{{!showSuccess}}">
+    <text class="section-title">支付方式</text>
+    
+    <view class="method-item {{selectedMethod === 'wechat' ? 'active' : ''}}" bindtap="selectMethod" data-method="wechat">
+      <view class="method-icon wechat">💳</view>
+      <view class="method-info">
+        <text class="method-name">微信支付</text>
+        <text class="method-desc">推荐使用</text>
+      </view>
+      <view class="check-icon" wx:if="{{selectedMethod === 'wechat'}}">✓</view>
+    </view>
+    
+    <view class="method-item {{selectedMethod === 'alipay' ? 'active' : ''}}" bindtap="selectMethod" data-method="alipay">
+      <view class="method-icon alipay">💰</view>
+      <view class="method-info">
+        <text class="method-name">支付宝</text>
+        <text class="method-desc">快捷支付</text>
+      </view>
+      <view class="check-icon" wx:if="{{selectedMethod === 'alipay'}}">✓</view>
+    </view>
+  </view>
+  
+  <view class="action-area">
+    <button 
+      class="btn-primary {{showSuccess ? '' : 'pay-btn'}}" 
+      bindtap="{{showSuccess ? 'viewOrder' : 'processPayment'}}"
+      loading="{{processing}}"
+    >
+      {{showSuccess ? '查看订单' : '确认支付 ¥' + totalPrice}}
+    </button>
+    
+    <button class="btn-secondary" bindtap="goBack" wx:if="{{!showSuccess}}">
+      返回修改
+    </button>
+  </view>
+  
+  <view class="security-hint" wx:if="{{!showSuccess}}">
+    <text>🔒 支付安全由微信支付保障</text>
+  </view>
+</view>

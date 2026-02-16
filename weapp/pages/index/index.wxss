@@ -1,0 +1,164 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60rpx;
+  background: linear-gradient(180deg, #FFF9F0 0%, #FFE4C4 100%);
+}
+
+/* 芒果精灵 */
+.mango-mascot {
+  margin-bottom: 60rpx;
+}
+
+.mango-body {
+  width: 240rpx;
+  height: 280rpx;
+  background: linear-gradient(145deg, #FFB347, #FF8C42);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  box-shadow: 0 20rpx 40rpx rgba(255, 107, 53, 0.3);
+}
+
+.leaf {
+  position: absolute;
+  top: -40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 60rpx;
+  background: linear-gradient(135deg, #7CB342, #558B2F);
+  border-radius: 0 100% 0 100%;
+}
+
+.mango-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160rpx;
+}
+
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.eye {
+  width: 24rpx;
+  height: 32rpx;
+  background: #2C3E50;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  top: 6rpx;
+  right: 4rpx;
+  width: 8rpx;
+  height: 10rpx;
+  background: white;
+  border-radius: 50%;
+}
+
+.cheeks {
+  position: absolute;
+  top: 50rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cheek {
+  width: 30rpx;
+  height: 20rpx;
+  background: rgba(255, 107, 107, 0.4);
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 60rpx;
+  height: 30rpx;
+  background: #2C3E50;
+  border-radius: 0 0 60rpx 60rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mouth::before {
+  content: '';
+  position: absolute;
+  bottom: 4rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rpx;
+  height: 16rpx;
+  background: #E74C3C;
+  border-radius: 0 0 40rpx 40rpx;
+}
+
+/* 标题 */
+.header {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 56rpx;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FF6B35, #FFB347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  font-size: 32rpx;
+  color: #7F8C8D;
+}
+
+/* 功能介绍 */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+  margin-bottom: 80rpx;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.feature-text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 操作区 */
+.action-area {
+  width: 100%;
+  text-align: center;
+}
+
+.main-btn {
+  width: 80%;
+  margin-bottom: 30rpx;
+}
+
+.hint {
+  font-size: 26rpx;
+  color: #999;
+}

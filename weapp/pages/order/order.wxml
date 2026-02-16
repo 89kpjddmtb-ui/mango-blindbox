@@ -1,0 +1,101 @@
+/**order.wxml**/
+<view class="container">
+  <view class="order-header">
+    <view class="status-badge">
+      <view class="status-icon">🎉</view>
+      <text class="status-text">{{order.status === 'paid' ? '订单已支付' : '订单已完成'}}</text>
+    </view>
+    
+    <view class="order-id">
+      <text class="label">订单编号：</text>
+      <text class="value">{{order.id}}</text>
+      <view class="copy-btn" bindtap="copyOrderId">复制</view>
+    </view>
+  </view>
+  
+  <view class="order-card">
+    <view class="section-title">商品信息</view>
+    
+    <view class="gift-detail">
+      <view class="gift-icon">🎁</view>
+      <view class="gift-content">
+        <text class="gift-name">{{order.gift.name}}</text>
+        <text class="gift-desc">{{order.gift.desc}}</text>
+        <view class="gift-meta">
+          <view class="platform-tag">{{order.gift.platform}}</view>
+          <text class="gift-price">¥{{order.gift.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="order-card" wx:if="{{order.logistics}}">
+    <view class="section-title">物流信息</view>
+    
+    <view class="logistics-info">
+      <view class="logistics-row">
+        <text class="label">快递公司</text>
+        <text class="value">{{order.logistics.company}}</text>
+      </view>
+      
+      <view class="logistics-row">
+        <text class="label">运单号</text>
+        <view class="tracking-row">
+          <text class="value">{{order.logistics.trackingNo}}</text>
+          <view class="copy-btn" bindtap="copyTrackingNo">复制</view>
+        </view>
+      </view>
+      
+      <view class="logistics-row">
+        <text class="label">预计送达</text>
+        <text class="value">{{formatDate(order.logistics.estimatedDelivery)}}</text>
+      </view>
+      
+      <view class="logistics-status">
+        <view class="status-dot {{order.logistics.status}}"></view>
+        <text class="status-label">{{logisticsStatusText}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="order-card">
+    <view class="section-title">订单金额</view>
+    
+    <view class="amount-detail">
+      <view class="amount-row">
+        <text class="label">商品价格</text>
+        <text class="value">¥{{order.gift.price}}</text>
+      </view>
+      
+      <view class="amount-row">
+        <text class="label">服务费</text>
+        <text class="value">¥1.00</text>
+      </view>
+      
+      <view class="amount-row total">
+        <text class="label">实付金额</text>
+        <text class="total-value">¥{{(order.gift.price + 1).toFixed(2)}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="tips-card">
+    <view class="tip-item">
+      <view class="tip-icon">📦</view>
+      <view class="tip-content">
+        <text class="tip-title">神秘包裹即将发出</text>
+        <text class="tip-text">收礼人将收到一份神秘惊喜，不知道是什么哦~</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="action-area">
+    <button class="btn-primary" bindtap="goHome">
+      返回首页
+    </button>
+    
+    <button class="btn-secondary" bindtap="shareOrder">
+      分享订单
+    </button>
+  </view>
+</view>

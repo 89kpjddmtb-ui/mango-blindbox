@@ -1,0 +1,45 @@
+/**budget.wxml**/
+<view class="container">
+  <view class="progress-bar">
+    <view class="progress-step active">✓</view>
+    <view class="progress-line active"></view>
+    <view class="progress-step active">2</view>
+    <view class="progress-line"></view>
+    <view class="progress-step">3</view>
+  </view>
+  
+  <text class="step-title">选择你的预算</text>
+  <text class="step-subtitle">AI将在预算范围内，为你精选3款神秘礼物</text>
+  
+  <view class="budget-grid">
+    <view 
+      class="budget-card {{selectedBudget === item.value ? 'active' : ''}}"
+      wx:for="{{budgetOptions}}"
+      wx:key="value"
+      bindtap="selectBudget"
+      data-value="{{item.value}}"
+    >
+      <view class="budget-amount"><text class="currency">¥</text>{{item.value}}</view>
+      <view class="budget-desc">{{item.label}}</view>
+      <view class="budget-tag">{{item.tag}}</view>
+      
+      <view class="selected-icon" wx:if="{{selectedBudget === item.value}}">✓</view>
+    </view>
+  </view>
+  
+  <view class="message-preview" wx:if="{{message}}">
+    <view class="preview-label">你的寄语：</view>
+    <text class="preview-text">{{message}}</text>
+  </view>
+  
+  <view class="action-area">
+    <button 
+      class="btn-primary {{!selectedBudget ? 'disabled' : ''}}" 
+      bindtap="nextStep"
+      disabled="{{!selectedBudget}}"
+      loading="{{loading}}"
+    >
+      {{loading ? 'AI正在挑选...' : '开始盲选'}}
+    </button>
+  </view>
+</view>

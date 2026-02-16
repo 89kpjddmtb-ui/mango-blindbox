@@ -1,0 +1,83 @@
+/**blindbox.wxml**/
+<view class="container">
+  <view class="progress-bar">
+    <view class="progress-step active">✓</view>
+    <view class="progress-line active"></view>
+    <view class="progress-step active">✓</view>
+    <view class="progress-line active"></view>
+    <view class="progress-step active">3</view>
+  </view>
+  
+  <text class="step-title">盲盒三选一</text>
+  <text class="step-subtitle">每个盲盒都藏着AI为你挑选的惊喜</text>
+  
+  <!-- 盲盒展示区 -->
+  <view class="blindbox-container">
+    <view 
+      class="blindbox-wrapper {{selectedIndex === index ? 'selected' : ''}} {{revealed ? 'revealed' : ''}}"
+      wx:for="{{gifts}}"
+      wx:key="id"
+      wx:for-index="index"
+      bindtap="selectBlindbox"
+      data-index="{{index}}"
+    >
+      <!-- 未选中状态 - 神秘盲盒 -->
+      <view class="blindbox-front" wx:if="{{!revealed}}">
+        <view class="blindbox-item">
+          <view class="question-mark">?</view>
+          <view class="blindbox-number">盲盒 {{index + 1}}</view>
+          <view class="keyword-hint">
+            <text class="hint-label">线索：</text>
+            <view class="keyword-tag">{{item.keyword}}</view>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 揭晓后状态 -->
+      <view class="blindbox-back" wx:if="{{revealed}}">
+        <view class="gift-revealed {{selectedIndex === index ? 'is-selected' : ''}}">
+          <view class="gift-icon">🎁</view>
+          <view class="gift-name">{{item.name}}</view>
+          <view class="gift-price">¥{{item.price}}</view>
+          
+          <view class="selected-badge" wx:if="{{selectedIndex === index}}">
+            已选中
+          </view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  
+  <!-- 操作按钮 -->
+  <view class="action-area" wx:if="{{!revealed}}">
+    <button 
+      class="btn-primary {{selectedIndex === null ? 'disabled' : ''}}" 
+      bindtap="revealGift"
+      disabled="{{selectedIndex === null}}"
+    >
+      {{selectedIndex === null ? '先选一个盲盒' : '揭晓神秘礼物'}}
+    </button>
+    
+    <text class="hint" wx:if="{{selectedIndex !== null}}">
+      点击揭晓，查看AI为你挑选的惊喜
+    </text>
+  </view>
+  
+  <view class="action-area" wx:if="{{revealed}}">
+    <view class="selected-gift-info">
+      <text class="gift-desc">{{gifts[selectedIndex].desc}}</text>
+      <view class="platform-tag">
+        来源：{{gifts[selectedIndex].platform}}
+      </view>
+    </view>
+    
+    <button class="btn-primary" bindtap="goToPayment">
+      确认并支付 ¥{{gifts[selectedIndex].price}}
+    </button>
+    
+    <button class="btn-secondary" bindtap="resetSelection">
+      重新选择
+    </button>
+  </view>
+</view>

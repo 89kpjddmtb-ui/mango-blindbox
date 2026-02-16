@@ -1,0 +1,152 @@
+/**message.wxss**/
+.container {
+  padding: 40rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9F0 0%, #FFFFFF 100%);
+}
+
+/* 进度条 */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60rpx;
+  padding: 0 40rpx;
+}
+
+.progress-step {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #E8E8E8;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 28rpx;
+  transition: all 0.3s ease;
+}
+
+.progress-step.active {
+  background: linear-gradient(135deg, #FFB347, #FF6B35);
+  color: white;
+  box-shadow: 0 4rpx 15rpx rgba(255, 107, 53, 0.4);
+}
+
+.progress-line {
+  flex: 1;
+  height: 4rpx;
+  background: #E8E8E8;
+  margin: 0 20rpx;
+}
+
+/* 标题 */
+.step-title {
+  display: block;
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.step-subtitle {
+  display: block;
+  font-size: 28rpx;
+  color: #7F8C8D;
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+/* 输入区 */
+.input-area {
+  margin-bottom: 40rpx;
+}
+
+.message-input {
+  width: 100%;
+  height: 300rpx;
+  background: white;
+  border: 2rpx solid #E8E8E8;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  font-size: 30rpx;
+  line-height: 1.6;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.message-input:focus {
+  border-color: #FFB347;
+  box-shadow: 0 0 0 4rpx rgba(255, 179, 71, 0.2);
+}
+
+.placeholder {
+  color: #BDBDBD;
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  padding: 0 10rpx;
+}
+
+.hint {
+  font-size: 24rpx;
+  color: #999;
+  flex: 1;
+}
+
+.char-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.char-count.warning {
+  color: #FF6B35;
+}
+
+/* 示例 */
+.examples {
+  margin-bottom: 60rpx;
+}
+
+.examples-title {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.example-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.example-tag {
+  background: rgba(255, 179, 71, 0.15);
+  color: #FF6B35;
+  padding: 16rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  border: 2rpx solid rgba(255, 107, 53, 0.2);
+  transition: all 0.3s ease;
+}
+
+.example-tag:active {
+  background: rgba(255, 179, 71, 0.3);
+  transform: scale(0.98);
+}
+
+/* 操作区 */
+.action-area {
+  margin-top: auto;
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/budget/budget",
+    "pages/blindbox/blindbox",
+    "pages/reveal/reveal",
+    "pages/payment/payment",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFB347",
+    "navigationBarTitleText": "芒果精灵盲盒",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6B35",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

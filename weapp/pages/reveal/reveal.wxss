@@ -1,0 +1,195 @@
+/**reveal.wxss**/
+.container {
+  padding: 40rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFE4C4 0%, #FFF9F0 50%, #FFFFFF 100%);
+}
+
+/* 揭晓头部 */
+.reveal-header {
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.sparkles {
+  font-size: 60rpx;
+  margin-bottom: 20rpx;
+  animation: sparkle 1s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.reveal-title {
+  display: block;
+  font-size: 56rpx;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FF6B35, #FFB347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30rpx;
+}
+
+/* 小芒果精灵 */
+.mango-mascot {
+  display: inline-block;
+}
+
+.mango-body-mini {
+  width: 120rpx;
+  height: 140rpx;
+  background: linear-gradient(145deg, #FFB347, #FF8C42);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mango-body-mini .eyes {
+  display: flex;
+  gap: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.mango-body-mini .eye {
+  width: 12rpx;
+  height: 16rpx;
+  background: #2C3E50;
+  border-radius: 50%;
+}
+
+.mango-body-mini .mouth {
+  width: 30rpx;
+  height: 15rpx;
+  background: #2C3E50;
+  border-radius: 0 0 30rpx 30rpx;
+}
+
+.mango-body-mini .mouth.happy {
+  height: 20rpx;
+  width: 35rpx;
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20rpx); }
+}
+
+/* 礼物揭晓卡片 */
+.gift-reveal-card {
+  background: white;
+  border-radius: 30rpx;
+  padding: 50rpx;
+  text-align: center;
+  box-shadow: 0 15rpx 40rpx rgba(255, 107, 53, 0.2);
+  margin-bottom: 40rpx;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50rpx); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.gift-image {
+  font-size: 120rpx;
+  margin-bottom: 30rpx;
+}
+
+.gift-content {
+  text-align: center;
+}
+
+.gift-name {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 20rpx;
+}
+
+.gift-desc {
+  display: block;
+  font-size: 28rpx;
+  color: #7F8C8D;
+  margin-bottom: 30rpx;
+  line-height: 1.5;
+}
+
+.gift-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.gift-price {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+.platform-badge {
+  background: rgba(78, 205, 196, 0.15);
+  color: #4ECDC4;
+  padding: 10rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+
+/* 推荐理由 */
+.match-reason {
+  background: white;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.reason-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 20rpx;
+}
+
+.reason-content {
+  background: linear-gradient(145deg, #FFF9F0, #FFE4C4);
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.user-message {
+  display: block;
+  font-size: 26rpx;
+  color: #FF6B35;
+  margin-bottom: 16rpx;
+  font-style: italic;
+}
+
+.ai-reason {
+  display: block;
+  font-size: 26rpx;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+/* 操作区 */
+.action-area {
+  margin-top: 20rpx;
+}
+
+.btn-secondary {
+  margin-top: 20rpx;
+  background: transparent;
+  color: #7F8C8D;
+  border: 2rpx solid #DDD;
+}

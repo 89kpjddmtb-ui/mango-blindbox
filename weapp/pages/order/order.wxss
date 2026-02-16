@@ -1,0 +1,288 @@
+/**order.wxss**/
+.container {
+  padding: 30rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9F0 0%, #FFFFFF 100%);
+}
+
+/* 订单头部 */
+.order-header {
+  text-align: center;
+  margin-bottom: 40rpx;
+  padding: 40rpx 0;
+}
+
+.status-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.status-icon {
+  font-size: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.status-text {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #52C41A;
+}
+
+.order-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.order-id .label {
+  color: #999;
+}
+
+.order-id .value {
+  color: #666;
+}
+
+.copy-btn {
+  background: rgba(255, 107, 53, 0.1);
+  color: #FF6B35;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  margin-left: 10rpx;
+}
+
+/* 卡片通用样式 */
+.order-card {
+  background: white;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+
+/* 商品信息 */
+.gift-detail {
+  display: flex;
+  align-items: flex-start;
+}
+
+.gift-icon {
+  font-size: 80rpx;
+  margin-right: 20rpx;
+}
+
+.gift-content {
+  flex: 1;
+}
+
+.gift-name {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 10rpx;
+}
+
+.gift-desc {
+  display: block;
+  font-size: 26rpx;
+  color: #7F8C8D;
+  margin-bottom: 16rpx;
+  line-height: 1.4;
+}
+
+.gift-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-tag {
+  background: rgba(78, 205, 196, 0.15);
+  color: #4ECDC4;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+}
+
+.gift-price {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+/* 物流信息 */
+.logistics-info {
+  padding: 10rpx 0;
+}
+
+.logistics-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+
+.logistics-row:last-child {
+  border-bottom: none;
+}
+
+.logistics-row .label {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.logistics-row .value {
+  font-size: 26rpx;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+.tracking-row {
+  display: flex;
+  align-items: center;
+}
+
+.logistics-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+  padding: 30rpx;
+  background: linear-gradient(145deg, #FFF9F0, #FFE4C4);
+  border-radius: 16rpx;
+}
+
+.status-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: 12rpx;
+}
+
+.status-dot.pending {
+  background: #FFB347;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.shipped {
+  background: #1677FF;
+}
+
+.status-dot.delivered {
+  background: #52C41A;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-label {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+/* 金额明细 */
+.amount-detail {
+  padding: 10rpx 0;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+
+.amount-row:last-child {
+  border-bottom: none;
+}
+
+.amount-row.total {
+  padding-top: 20rpx;
+  margin-top: 10rpx;
+  border-top: 4rpx solid #F0F0F0;
+  border-bottom: none;
+}
+
+.amount-row .label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.amount-row .value {
+  font-size: 28rpx;
+  color: #2C3E50;
+}
+
+.total-value {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+/* 提示卡片 */
+.tips-card {
+  background: linear-gradient(145deg, #FFF9F0, #FFE4C4);
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tip-icon {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 10rpx;
+}
+
+.tip-text {
+  font-size: 26rpx;
+  color: #7F8C8D;
+  line-height: 1.5;
+}
+
+/* 操作区 */
+.action-area {
+  margin-top: 20rpx;
+}
+
+.btn-secondary {
+  margin-top: 20rpx;
+  background: transparent;
+  color: #7F8C8D;
+  border: 2rpx solid #DDD;
+}

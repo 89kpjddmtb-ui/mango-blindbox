@@ -1,0 +1,50 @@
+/**index.wxml**/
+<view class="container">
+  <!-- 芒果精灵形象区 -->
+  <view class="mango-mascot float">
+    <view class="mango-body">
+      <view class="mango-face">
+        <view class="eyes">
+          <view class="eye"></view>
+          <view class="eye"></view>
+        </view>
+        <view class="cheeks">
+          <view class="cheek"></view>
+          <view class="cheek"></view>
+        </view>
+        <view class="mouth"></view>
+      </view>
+      <view class="leaf"></view>
+    </view>
+  </view>
+  
+  <!-- 标题区 -->
+  <view class="header">
+    <text class="title">芒果精灵盲盒</text>
+    <text class="subtitle">用心选择，惊喜相伴</text>
+  </view>
+  
+  <!-- 功能介绍 -->
+  <view class="features">
+    <view class="feature-item">
+      <view class="feature-icon">🎁</view>
+      <text class="feature-text">AI智能推荐</text>
+    </view>
+    <view class="feature-item">
+      <view class="feature-icon">✨</view>
+      <text class="feature-text">神秘盲选</text>
+    </view>
+    <view class="feature-item">
+      <view class="feature-icon">💝</view>
+      <text class="feature-text">惊喜礼物</text>
+    </view>
+  </view>
+  
+  <!-- 主按钮 -->
+  <view class="action-area">
+    <button class="btn-primary main-btn" bindtap="startBlindBox">
+      🎊 开启盲盒之旅
+    </button>
+    <text class="hint">写下寄语，让AI为你挑选心意礼物</text>
+  </view>
+</view>

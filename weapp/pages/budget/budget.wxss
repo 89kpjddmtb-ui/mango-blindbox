@@ -1,0 +1,159 @@
+/**budget.wxss**/
+.container {
+  padding: 40rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9F0 0%, #FFFFFF 100%);
+}
+
+/* 进度条 */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60rpx;
+  padding: 0 40rpx;
+}
+
+.progress-step {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #E8E8E8;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+
+.progress-step.active {
+  background: linear-gradient(135deg, #FFB347, #FF6B35);
+  color: white;
+  box-shadow: 0 4rpx 15rpx rgba(255, 107, 53, 0.4);
+}
+
+.progress-line {
+  flex: 1;
+  height: 4rpx;
+  background: #E8E8E8;
+  margin: 0 20rpx;
+}
+
+.progress-line.active {
+  background: linear-gradient(90deg, #FFB347, #FF6B35);
+}
+
+/* 标题 */
+.step-title {
+  display: block;
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.step-subtitle {
+  display: block;
+  font-size: 28rpx;
+  color: #7F8C8D;
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+/* 预算选项 */
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.budget-card {
+  background: white;
+  border-radius: 24rpx;
+  padding: 40rpx 30rpx;
+  text-align: center;
+  border: 4rpx solid transparent;
+  box-shadow: 0 4rpx 15rpx rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.budget-card.active {
+  border-color: #FF6B35;
+  background: linear-gradient(145deg, rgba(255, 179, 71, 0.05), rgba(255, 107, 53, 0.1));
+  transform: scale(1.02);
+}
+
+.budget-amount {
+  font-size: 56rpx;
+  font-weight: 800;
+  color: #FF6B35;
+  margin-bottom: 10rpx;
+}
+
+.currency {
+  font-size: 32rpx;
+  margin-right: 4rpx;
+}
+
+.budget-desc {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.budget-tag {
+  display: inline-block;
+  background: rgba(78, 205, 196, 0.15);
+  color: #4ECDC4;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+}
+
+.selected-icon {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 36rpx;
+  height: 36rpx;
+  background: #FF6B35;
+  color: white;
+  border-radius: 50%;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 寄语预览 */
+.message-preview {
+  background: rgba(255, 179, 71, 0.1);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.preview-label {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.preview-text {
+  font-size: 28rpx;
+  color: #2C3E50;
+  line-height: 1.5;
+}
+
+/* 操作区 */
+.action-area {
+  margin-top: auto;
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+}

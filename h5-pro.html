@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>芒果精灵盲盒 - AI为你挑选惊喜礼物</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #FF6B35;
+            --primary-light: #FFB347;
+            --secondary: #4ECDC4;
+            --bg-gradient: linear-gradient(180deg, #FFF9F0 0%, #FFE8D6 50%, #FFD4BA 100%);
+            --shadow: 0 10px 40px rgba(255, 107, 53, 0.2);
+            --shadow-hover: 0 15px 50px rgba(255, 107, 53, 0.3);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 430px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 背景装饰 */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .floating-mango {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.15;
+            animation: float-random 8s ease-in-out infinite;
+        }
+        
+        @keyframes float-random {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(-10px) rotate(-5deg); }
+            75% { transform: translateY(-30px) rotate(3deg); }
+        }
+        
+        /* 页面切换 */
+        .page {
+            display: none;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            animation: pageEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .page.active { display: block; }
+        
+        @keyframes pageEnter {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        @keyframes pageExit {
+            to { opacity: 0; transform: translateX(-30px); }
+        }
+        
+        /* 芒果精灵 - 升级版 */
+        .mango-mascot {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .mango-body {
+            width: 140px;
+            height: 160px;
+            background: linear-gradient(145deg, #FFB347 0%, #FF8C42 50%, #FF6B35 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 
+                0 15px 35px rgba(255, 107, 53, 0.4),
+                inset 0 -10px 20px rgba(0,0,0,0.1);
+            animation: mangoFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes mangoFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg) scale(1); }
+            50% { transform: translateY(-15px) rotate(2deg) scale(1.02); }
+        }
+        
+        .mango-body .leaf {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(135deg, #8BC34A 0%, #558B2F 100%);
+            border-radius: 0 100% 0 100%;
+            animation: leafSway 2s ease-in-out infinite;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes leafSway {
+            0%, 100% { transform: translateX(-50%) rotate(-15deg); }
+            50% { transform: translateX(-50%) rotate(15deg); }
+        }
+        
+        .mango-face {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+        }
+        
+        .eyes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 0 5px;
+        }
+        
+        .eye {
+            width: 18px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            animation: blink 4s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 96%, 100% { transform: scaleY(1); }
+            98% { transform: scaleY(0.1); }
+        }
+        
+        .eye::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 14px;
+            background: #3E2723;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .eye::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            top: 4px;
+            right: 3px;
+            z-index: 1;
+        }
+        
+        .cheeks {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+        
+        .cheek {
+            width: 18px;
+            height: 12px;
+            background: rgba(255, 138, 128, 0.5);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+        
+        .mouth {
+            width: 30px;
+            height: 15px;
+            border-bottom: 4px solid #3E2723;
+            border-radius: 0 0 30px 30px;
+            margin: 0 auto;
+            animation: smile 2s ease-in-out infinite;
+        }
+        
+        @keyframes smile {
+            0%, 100% { transform: scaleX(1); }
+            50% { transform: scaleX(1.1); }
+        }
+        
+        /* 标题 */
+        .header-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .title {
+            font-size: 36px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FF6B35 0%, #FFB347 50%, #FF8C42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #8B7355;
+            line-height: 1.6;
+        }
+        
+        /* 特性卡片 */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            background: rgba(255,255,255,0.8);
+            padding: 20px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: featurePulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes featurePulse {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .feature-text {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* 按钮 */
+        .btn {
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #FFB347 0%, #FF6B35 100%);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer-btn 2s infinite;
+        }
+        
+        @keyframes shimmer-btn {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-top: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 107, 53, 0.05);
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        /* 进度条 */
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        
+        .progress-step {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #F0F0F0;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+        
+        .progress-step.active {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .progress-step.done {
+            background: linear-gradient(135deg, #52C41A, #389E0D);
+            color: white;
+        }
+        
+        .progress-step.done::after {
+            content: '✓';
+        }
+        
+        .progress-step.done span {
+            display: none;
+        }
+        
+        .progress-line {
+            flex: 1;
+            height: 4px;
+            background: #F0F0F0;
+            margin: 0 15px;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-line.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, var(--primary-light), var(--primary));
+            animation: lineGrow 0.5s ease forwards;
+        }
+        
+        @keyframes lineGrow {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        /* 输入框 */
+        .input-section {
+            background: rgba(255,255,255,0.9);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .message-input {
+            width: 100%;
+            height: 140px;
+            background: #F8F8F8;
+            border: 2px solid transparent;
+            border-radius: 18px;
+            padding: 20px;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            transition: all 0.3s;
+            font-family: inherit;
+            line-height: 1.6;
+        }
+        
+        .message-input:focus {
+            border-color: var(--primary-light);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(255, 179, 71, 0.15);
+        }
+        
+        .input-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .char-count {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* 示例标签 */
+        .examples {
+            margin-bottom: 30px;
+        }
+        
+        .examples-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .example-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .example-tag {
+            background: linear-gradient(135deg, rgba(255, 179, 71, 0.1), rgba(255, 107, 53, 0.1));
+            color: var(--primary);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .example-tag:hover {
+            background: linear-gradient(135deg, rgba(255, 179, 71, 0.2), rgba(255, 107, 53, 0.2));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+        }
+        
+        /* 预算选项 */
+        .budget-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .budget-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .budget-card {
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .budget-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-light), var(--primary));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .budget-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .budget-card.active {
+            border-color: var(--primary);
+            background: linear-gradient(145deg, rgba(255, 179, 71, 0.08), rgba(255, 107, 53, 0.12));
+            transform: scale(1.02);
+        }
+        
+        .budget-card.active::before {
+            transform: scaleX(1);
+        }
+        
+        .budget-amount {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+        
+        .budget-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .budget-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(78, 205, 196, 0.25));
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        /* 加载页 */
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            text-align: center;
+        }
+        
+        .loading-mango {
+            width: 120px;
+            height: 140px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .loading-body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #FFB347, #FF6B35);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: loadingPulse 1.5s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+        
+        @keyframes loadingPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        
+        .loading-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .loading-dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: dotBounce 1.4s ease-in-out infinite;
+        }
+        
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes dotBounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+        }
+        
+        .loading-status {
+            font-size: 14px;
+            color: #999;
+            height: 20px;
+        }
+        
+        /* 盲盒 */
+        .blindbox-section {
+            margin-bottom: 30px;
+        }
+        
+        .blindbox-hint {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 15px;
+        }
+        
+        .blindbox-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .blindbox-item {
+            flex: 1;
+            background: linear-gradient(145deg, #FFB347, #FF6B35);
+            border-radius: 24px;
+            padding: 30px 12px;
+            text-align: center;
+            cursor: pointer;
+            border: 4px solid transparent;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.25);
+        }
+        
+        .blindbox-item::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%);
+            animation: boxShimmer 2.5s infinite;
+        }
+        
+        @keyframes boxShimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .blindbox-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.35);
+        }
+        
+        .blindbox-item.selected {
+            border-color: #FFE66D;
+            box-shadow: 0 0 30px rgba(255, 230, 109, 0.6);
+            animation: selectedPulse 0.6s ease;
+        }
+        
+        @keyframes selectedPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1.05); }
+        }
+        
+        .blindbox-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .question-mark {
+            font-size: 48px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 15px;
+            animation: questionFloat 2s ease-in-out infinite;
+        }
+        
+        @keyframes questionFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .blindbox-num {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .keyword-tag {
+            background: rgba(255,255,255,0.25);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: white;
+            display: inline-block;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+        
+        .price-hint {
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 10px;
+        }
+        
+        /* 礼物揭晓 */
+        .reveal-container {
+            animation: revealPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        @keyframes revealPop {
+            0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+            50% { transform: scale(1.05) rotate(2deg); }
+            100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+        
+        .gift-reveal {
+            background: white;
+            border-radius: 30px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2);
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gift-reveal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #FFB347, #FF6B35, #FFB347);
+        }
+        
+        .gift-image {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+            background: linear-gradient(145deg, #FFF5F0, #FFE8E0);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+            animation: giftFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes giftFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .gift-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .gift-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .gift-price-section {
+            background: linear-gradient(145deg, #FFF5F0, #FFEEE5);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .price-label {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        
+        .gift-price {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B35, #FFB347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .price-notice {
+            font-size: 12px;
+            color: #999;
+            margin-top: 8px;
+        }
+        
+        .platform-badge {
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(78, 205, 196, 0.25));
+            color: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .recommend-reason {
+            background: rgba(255, 179, 71, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 0 15px 15px 0;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .recommend-label {
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .recommend-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* 京东跳转按钮 */
+        .jd-btn {
+            background: linear-gradient(135deg, #E4393C, #C81623);
+            color: white;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(228, 57, 60, 0.3);
+            margin-bottom: 15px;
+        }
+        
+        .jd-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(228, 57, 60, 0.4);
+        }
+        
+        .jd-btn::before {
+            content: '🐕';
+            font-size: 24px;
+        }
+        
+        .change-btn {
+            background: white;
+            color: #666;
+            border: 2px solid #DDD;
+            padding: 15px 30px;
+            font-size: 15px;
+            border-radius: 50px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .change-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        /* 跳转提示页 */
+        .redirect-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .redirect-icon {
+            font-size: 80px;
+            margin-bottom: 30px;
+            animation: redirectBounce 1s ease infinite;
+        }
+        
+        @keyframes redirectBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .redirect-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .redirect-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .redirect-hint {
+            background: rgba(255, 179, 71, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .redirect-hint-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .redirect-hint-list {
+            font-size: 13px;
+            color: #666;
+            text-align: left;
+            line-height: 2;
+        }
+        
+        /* 底部安全提示 */
+        .security-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            padding: 12px 20px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* 响应式优化 */
+        @media (max-height: 700px) {
+            .mango-mascot { margin: 15px 0; }
+            .mango-body { width: 120px; height: 140px; }
+            .title { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="bg-decoration" id="bg-decoration"></div>
+    
+    <div class="container">
+        <!-- 页面1: 首页 -->
+        <div class="page active" id="page-index">
+            <div class="mango-mascot">
+                <div class="mango-body">
+                    <div class="leaf"></div>
+                    <div class="mango-face">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div class="cheeks">
+                            <div class="cheek"></div>
+                            <div class="cheek"></div>
+                        </div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-title">
+                <div class="title">芒果精灵盲盒</div>
+                <div class="subtitle">写下你的心意寄语<br>AI为你挑选神秘礼物</div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <span class="feature-icon">🤖</span>
+                    <span class="feature-text">AI智能推荐</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎁</span>
+                    <span class="feature-text">神秘盲盒</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <span class="feature-text">惊喜揭晓</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToPage('page-message')">
+                🎊 开启盲盒之旅
+            </button>
+            
+            <p style="text-align: center; font-size: 13px; color: #999; margin-top: 25px;">
+                💡 免费推荐 · 满意再买 · 京东正品保障
+            </p>
+        </div>
+        
+        <!-- 页面2: 输入寄语 -->
+        <div class="page" id="page-message">
+            <div class="progress-bar">
+                <div class="progress-step done"><span>1</span></div>
+                <div class="progress-line active"></div>
+                <div class="progress-step active"><span>2</span></div>
+                <div class="progress-line"></div>
+                <div class="progress-step"><span>3</span></div>
+            </div>
+            
+            <div class="header-title">
+                <div class="title" style="font-size: 26px;">写下你的心意</div>
+                <div class="subtitle">AI将根据你的寄语，为你挑选最贴心的礼物</div>
+            </div>
+            
+            <div class="input-section">
+                <textarea 
+                    class="message-input" 
+                    id="message-input"
+                    placeholder="例如：送给我最好的朋友，她最近工作很辛苦，想让她开心一下..."
+                    maxlength="100"
+                ></textarea>
+                <div class="input-footer">
+                    <span>💡 可以描述收礼人性格、你们的故事或你想表达的情感</span>
+                    <span class="char-count"><span id="char-count">0</span>/100</span>
+                </div>
+            </div>
+            
+            <div class="examples">
+                <span class="examples-title">💭 参考示例（点击快速填充）：</span>
+                <div class="example-tags">
+                    <span class="example-tag" onclick="setMessage('我就是超人，为自己加油打气！')">我就是超人</span>
+                    <span class="example-tag" onclick="setMessage('送给最温暖的TA，感谢一路陪伴')">送给最温暖的你</span>
+                    <span class="example-tag" onclick="setMessage('安慰最近失恋的闺蜜，想让她振作起来')">安慰失恋闺蜜</span>
+                    <span class="example-tag" onclick="setMessage('愿你每天都被可爱包围，做个快乐的小仙女')">可爱小仙女</span>
+                    <span class="example-tag" onclick="setMessage('程序员男友生日，送他实用的数码好物')">程序员男友</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" id="btn-next" onclick="goToBudget()" disabled>
+                下一步：选择预算 💰
+            </button>
+            
+            <button class="btn btn-secondary" onclick="goToPage('page-index')">
+                ← 返回首页
+            </button>
+        </div>
+        
+        <!-- 页面3: 选择预算 -->
+        <div class="page" id="page-budget">
+            <div class="progress-bar">
+                <div class="progress-step done"><span>1</span></div>
+                <div class="progress-line active"></div>
+                <div class="progress-step done"><span>2</span></div>
+                <div class="progress-line active"></div>
+                <div class="progress-step active"><span>3</span></div>
+            </div>
+            
+            <div class="header-title">
+                <div class="title" style="font-size: 26px;">选择预算范围</div>
+                <div class="subtitle">AI将为你推荐不超过该价格的精选礼物</div>
+            </div>
+            
+            <div class="budget-section">
+                <div class="budget-grid">
+                    <div class="budget-card" onclick="selectBudget(10, this)">
+                        <div class="budget-amount">10</div>
+                        <div class="budget-label">轻量级心意</div>
+                        <span class="budget-tag">小惊喜</span>
+                    </div>
+                    <div class="budget-card" onclick="selectBudget(30, this)">
+                        <div class="budget-amount">30</div>
+                        <div class="budget-label">日常好礼</div>
+                        <span class="budget-tag">随手送</span>
+                    </div>
+                    <div class="budget-card" onclick="selectBudget(50, this)">
+                        <div class="budget-amount">50</div>
+                        <div class="budget-label">走心之选</div>
+                        <span class="budget-tag">最受欢迎</span>
+                    </div>
+                    <div class="budget-card" onclick="selectBudget(150, this)">
+                        <div class="budget-amount">150</div>
+                        <div class="budget-label">品质礼物</div>
+                        <span class="budget-tag">有档次</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <div class="budget-card" onclick="showCustomBudget()" id="custom-budget-card">
+                        <div class="budget-amount" style="font-size: 28px;">💰</div>
+                        <div class="budget-label">自定义金额</div>
+                        <span class="budget-tag">随心选</span>
+                    </div>
+                </div>
+                
+                <!-- 自定义金额输入 -->
+                <div id="custom-budget-input" style="display: none; margin-top: 15px; background: rgba(255,255,255,0.9); border-radius: 20px; padding: 20px;">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 10px;">输入你的预算金额（元）</div>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="number" id="custom-amount" placeholder="例如：88" style="flex: 1; padding: 15px; border: 2px solid #eee; border-radius: 15px; font-size: 16px; outline: none;" oninput="validateCustomBudget(this.value)">
+                        <button onclick="confirmCustomBudget()" id="btn-confirm-custom" style="padding: 15px 25px; background: linear-gradient(135deg, #FFB347, #FF6B35); color: white; border: none; border-radius: 15px; font-size: 16px; font-weight: 600; cursor: pointer;" disabled>确定</button>
+                    </div>
+                    <div style="font-size: 12px; color: #999; margin-top: 8px;">建议范围：5-500元</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" id="btn-recommend" onclick="startRecommend()" disabled>
+                ✨ AI开始推荐
+            </button>
+            
+            <button class="btn btn-secondary" onclick="goToPage('page-message')">
+                ← 返回修改寄语
+            </button>
+        </div>
+        
+        <!-- 页面4: AI推荐加载 -->
+        <div class="page" id="page-loading">
+            <div class="loading-container">
+                <div class="loading-mango">
+                    <div class="loading-body"></div>
+                </div>
+                <div class="loading-text">芒果精灵正在思考...</div>
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="loading-status" id="loading-status">正在分析你的心意</div>
+            </div>
+        </div>
+        
+        <!-- 页面5: 盲盒三选一 -->
+        <div class="page" id="page-blindbox">
+            <div class="blindbox-section">
+                <div class="header-title">
+                    <div class="title" style="font-size: 24px;">选一个神秘盲盒</div>
+                    <div class="subtitle">凭直觉选一个，揭晓你的专属礼物</div>
+                </div>
+                
+                <div class="blindbox-hint">
+                    🎁 每个盲盒都包含一个AI精选礼物<br>
+                    选中后揭晓具体内容
+                </div>
+                
+                <div class="blindbox-container" id="blindbox-container">
+                    <!-- 动态生成 -->
+                </div>
+            </div>
+            
+            <button class="btn btn-secondary" onclick="goToPage('page-budget')">
+                ← 重新选择预算
+            </button>
+        </div>
+        
+        <!-- 页面6: 揭晓礼物 -->
+        <div class="page" id="page-reveal">
+            <div class="reveal-container">
+                <div class="gift-reveal">
+                    <div class="gift-image" id="gift-image">🎁</div>
+                    <div class="gift-name" id="gift-name">礼物名称</div>
+                    <div class="gift-desc" id="gift-desc">礼物描述</div>
+                    
+                    <div class="gift-price-section">
+                        <div class="price-label">参考价格</div>
+                        <div class="gift-price" id="gift-price">¥0</div>
+                        <div class="price-notice">⚠️ 实际价格以京东页面为准，可能存在浮动</div>
+                    </div>
+                    
+                    <span class="platform-badge">🛒 京东精选</span>
+                    
+                    <div class="recommend-reason">
+                        <div class="recommend-label">🎯 为什么推荐这个？</div>
+                        <div class="recommend-text" id="recommend-text">推荐理由</div>
+                    </div>
+                </div>
+                
+                <button class="jd-btn" onclick="goToJD()">
+                    去京东购买
+                </button>
+                
+                <button class="change-btn" onclick="goToPage('page-blindbox')">
+                    🤔 不满意？换一个盲盒
+                </button>
+            </div>
+        </div>
+        
+        <!-- 页面7: 跳转提示 -->
+        <div class="page" id="page-redirect">
+            <div class="redirect-container">
+                <div class="redirect-icon">🐕</div>
+                <div class="redirect-title">正在跳转至京东...</div>
+                <div class="redirect-text">
+                    你将被引导至京东完成购买<br>
+                    请在京东APP或网页中完成下单
+                </div>
+                
+                <div class="redirect-hint">
+                    <div class="redirect-hint-title">💡 购物小贴士：</div>
+                    <div class="redirect-hint-list">
+                        • 京东提供正品保障和售后服务<br>
+                        • 可享受京东物流快速配送<br>
+                        • 支持7天无理由退换货
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="goToPage('page-index')">
+                    🎁 再玩一次
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="security-notice">
+        🔒 购物安全提示：点击购买后将跳转至京东官方网站，请在京东完成支付
+    </div>
+
+    <script>
+        // ==================== 后端 API 配置 ====================
+        const API_BASE = 'http://localhost:3000';
+        
+        // ==================== 数据存储 ====================
+        let currentMessage = '';
+        let selectedBudget = null;
+        let recommendedGifts = [];
+        let selectedGift = null;
+        
+        // ==================== 数据上报 ====================
+        async function logVisit(page) {
+            try {
+                await fetch(`${API_BASE}/api/analytics/visit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ page })
+                });
+            } catch (e) { console.log('记录访问失败'); }
+        }
+        
+        async function logMessage(message, budget) {
+            try {
+                await fetch(`${API_BASE}/api/analytics/message`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message, budget })
+                });
+            } catch (e) { console.log('记录寄语失败'); }
+        }
+        
+        async function logSelection(message, budget, selectedBox, giftName, giftPrice) {
+            try {
+                await fetch(`${API_BASE}/api/analytics/selection`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message, budget, selectedBox, giftName, giftPrice })
+                });
+            } catch (e) { console.log('记录选择失败'); }
+        }
+        
+        async function logClick(giftName, giftPrice, keyword) {
+            try {
+                await fetch(`${API_BASE}/api/analytics/click`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ giftName, giftPrice, keyword })
+                });
+            } catch (e) { console.log('记录点击失败'); }
+        }
+        
+        // 礼物数据库（预定义，实际应从后端获取）
+        const giftDatabase = {
+            hero: [
+                { name: '漫威英雄手办套装', desc: '经典英雄角色，精致收藏级手办', emoji: '🦸', price: 45, keyword: '英雄守护', reason: '你提到了"超人"，这是英雄主题的经典选择，代表力量和守护' },
+                { name: '超人披风毛毯', desc: '柔软舒适，盖上变身超级英雄', emoji: '🦸‍♂️', price: 38, keyword: '超人力量', reason: '温暖又充满力量感的礼物，每天盖着它都能感受到自己的超能力' },
+                { name: '英雄主题马克杯', desc: '每天一杯，充满力量', emoji: '☕', price: 28, keyword: '英雄日常', reason: '实用又走心，每次喝水都能想起你对自己的期许' }
+            ],
+            warm: [
+                { name: '星空投影灯', desc: '浪漫星空，温馨氛围', emoji: '✨', price: 35, keyword: '星光守护', reason: '温暖治愈系的礼物，适合营造舒适放松的氛围' },
+                { name: '香薰蜡烛套装', desc: '舒缓身心，浪漫气息', emoji: '🕯️', price: 32, keyword: '香氛浪漫', reason: '带来温暖和宁静，是一份走心的治愈之选' },
+                { name: '暖手宝', desc: '冬日温暖，握在手心', emoji: '🔥', price: 33, keyword: '温暖守护', reason: '实实在在的温暖，就像你对TA的关心一样贴心' }
+            ],
+            cute: [
+                { name: '芒果精灵玩偶', desc: '超萌芒果造型，治愈系伙伴', emoji: '🥭', price: 36, keyword: '萌力全开', reason: '可爱治愈，让TA每天都能被萌力包围' },
+                { name: '毛绒钥匙扣', desc: '软萌挂件，随身携带', emoji: '🧸', price: 16, keyword: '萌趣随行', reason: '小巧可爱的陪伴，随时随地都能想起你的心意' },
+                { name: '卡通发夹套装', desc: '可爱造型，少女心爆棚', emoji: '🎀', price: 15, keyword: '甜美可爱', reason: '少女心满满的小物，适合喜欢可爱的TA' }
+            ],
+            tech: [
+                { name: '迷你蓝牙音箱', desc: '小巧便携，音质出色', emoji: '🔊', price: 49, keyword: '声动人心', reason: '科技感十足的实用好物，适合喜欢数码产品的TA' },
+                { name: '创意手机支架', desc: '懒人神器，追剧必备', emoji: '📱', price: 18, keyword: '解放双手', reason: '实用又贴心的小物，让TA的生活更方便' },
+                { name: 'LED小夜灯', desc: '智能感应，温馨守护', emoji: '💡', price: 28, keyword: '温暖微光', reason: '科技感与温暖并存，夜间的好伴侣' }
+            ]
+        };
+        
+        // ==================== 页面切换 ====================
+        function goToPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+            
+            // 记录页面访问
+            logVisit(pageId);
+        }
+        
+        // ==================== 首页装饰 ====================
+        function initBgDecoration() {
+            const container = document.getElementById('bg-decoration');
+            const emojis = ['🥭', '✨', '🎁', '💝', '🌟'];
+            for (let i = 0; i < 8; i++) {
+                const el = document.createElement('div');
+                el.className = 'floating-mango';
+                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                el.style.left = Math.random() * 100 + '%';
+                el.style.top = Math.random() * 100 + '%';
+                el.style.animationDelay = Math.random() * 5 + 's';
+                el.style.animationDuration = (6 + Math.random() * 4) + 's';
+                container.appendChild(el);
+            }
+        }
+        
+        // ==================== 寄语页面 ====================
+        const messageInput = document.getElementById('message-input');
+        const charCount = document.getElementById('char-count');
+        const btnNext = document.getElementById('btn-next');
+        
+        messageInput.addEventListener('input', function() {
+            currentMessage = this.value;
+            charCount.textContent = currentMessage.length;
+            btnNext.disabled = currentMessage.length === 0;
+        });
+        
+        function setMessage(text) {
+            messageInput.value = text;
+            currentMessage = text;
+            charCount.textContent = text.length;
+            btnNext.disabled = false;
+            // 添加轻微动画反馈
+            messageInput.style.transform = 'scale(1.02)';
+            setTimeout(() => messageInput.style.transform = 'scale(1)', 200);
+        }
+        
+        function goToBudget() {
+            if (!currentMessage.trim()) return;
+            goToPage('page-budget');
+        }
+        
+        // ==================== 预算页面 ====================
+        function selectBudget(amount, element) {
+            selectedBudget = amount;
+            document.querySelectorAll('.budget-card').forEach(c => c.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('btn-recommend').disabled = false;
+            
+            // 隐藏自定义输入框
+            document.getElementById('custom-budget-input').style.display = 'none';
+        }
+        
+        function showCustomBudget() {
+            // 取消其他选项的选中状态
+            document.querySelectorAll('.budget-card').forEach(c => c.classList.remove('active'));
+            document.getElementById('custom-budget-card').classList.add('active');
+            
+            // 显示自定义输入框
+            document.getElementById('custom-budget-input').style.display = 'block';
+            document.getElementById('btn-recommend').disabled = true;
+            
+            // 聚焦输入框
+            setTimeout(() => document.getElementById('custom-amount').focus(), 100);
+        }
+        
+        function validateCustomBudget(value) {
+            const amount = parseInt(value);
+            const btn = document.getElementById('btn-confirm-custom');
+            
+            if (amount && amount >= 5 && amount <= 500) {
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
+        }
+        
+        function confirmCustomBudget() {
+            const amount = parseInt(document.getElementById('custom-amount').value);
+            if (amount && amount >= 5 && amount <= 500) {
+                selectedBudget = amount;
+                document.getElementById('btn-recommend').disabled = false;
+                document.getElementById('custom-budget-input').style.display = 'none';
+                
+                // 更新自定义卡片显示
+                document.querySelector('#custom-budget-card .budget-amount').textContent = `¥${amount}`;
+                document.querySelector('#custom-budget-card .budget-amount').style.fontSize = '32px';
+            }
+        }
+        
+        // ==================== AI推荐 ====================
+        async function startRecommend() {
+            if (!selectedBudget) return;
+            
+            // 记录用户寄语和预算
+            await logMessage(currentMessage, selectedBudget);
+            
+            goToPage('page-loading');
+            
+            // 模拟AI分析过程
+            const statuses = [
+                '正在分析你的心意...',
+                '正在匹配礼物库...',
+                '正在筛选精选好物...',
+                '正在生成盲盒...'
+            ];
+            
+            let statusIndex = 0;
+            const statusEl = document.getElementById('loading-status');
+            
+            const statusInterval = setInterval(() => {
+                statusIndex++;
+                if (statusIndex < statuses.length) {
+                    statusEl.textContent = statuses[statusIndex];
+                }
+            }, 600);
+            
+            // 分析寄语并选择分类
+            setTimeout(async () => {
+                clearInterval(statusInterval);
+                const category = analyzeMessage(currentMessage);
+                
+                // 从后端API获取礼物列表
+                try {
+                    const response = await fetch(`${API_BASE}/api/gifts?category=${category}&budget=${selectedBudget}`);
+                    const data = await response.json();
+                    if (data.success) {
+                        recommendedGifts = data.data;
+                    } else {
+                        // API失败使用默认数据
+                        recommendedGifts = getDefaultGifts(category, selectedBudget);
+                    }
+                } catch (e) {
+                    // 出错使用默认数据
+                    recommendedGifts = getDefaultGifts(category, selectedBudget);
+                }
+                
+                renderBlindbox();
+                goToPage('page-blindbox');
+            }, 2500);
+        }
+        
+        function analyzeMessage(message) {
+            const keywords = {
+                hero: ['超人', '英雄', '强大', '力量', '勇敢', '保护', '守护', '坚强', '漫威', '加油', '打气'],
+                warm: ['温暖', '陪伴', '感谢', '安慰', '治愈', '辛苦', '关心', '贴心'],
+                cute: ['可爱', '萌', '少女', '仙女', '甜', '卡哇伊', '治愈'],
+                tech: ['数码', '科技', '程序员', '实用', '电子', '智能', '男友', '老公']
+            };
+            
+            const scores = { hero: 0, warm: 0, cute: 0, tech: 0 };
+            const msg = message.toLowerCase();
+            
+            for (const [category, words] of Object.entries(keywords)) {
+                for (const word of words) {
+                    if (msg.includes(word)) scores[category]++;
+                }
+            }
+            
+            let bestCategory = 'cute';
+            let maxScore = 0;
+            for (const [cat, score] of Object.entries(scores)) {
+                if (score > maxScore) {
+                    maxScore = score;
+                    bestCategory = cat;
+                }
+            }
+            return bestCategory;
+        }
+        
+        // 默认礼物数据（API失败时使用）
+        function getDefaultGifts(category, budget) {
+            const defaults = {
+                hero: [
+                    { name: '漫威钢铁侠手办', desc: '正版授权漫威手办，精致细节，高度还原电影造型', price: 45, keyword: '英雄守护', sku: '100012043978', image: 'https://img14.360buyimg.com/n0/jfs/t1/123456/1/1234/123456.jpg', emoji: '🦸', boxNum: 'A' },
+                    { name: '超人披风毛毯', desc: '超人标志披风设计，法兰绒材质超柔软', price: 38, keyword: '超人力量', sku: '100008348542', image: 'https://img14.360buyimg.com/n0/jfs/t1/123457/1/1235/123457.jpg', emoji: '🦸‍♂️', boxNum: 'B' },
+                    { name: '英雄主题马克杯', desc: '漫威英雄系列陶瓷杯，400ml大容量', price: 28, keyword: '英雄日常', sku: '100023456789', image: 'https://img14.360buyimg.com/n0/jfs/t1/123458/1/1236/123458.jpg', emoji: '☕', boxNum: 'C' }
+                ],
+                warm: [
+                    { name: '星空投影灯', desc: '梦幻星空投影，6种灯光模式，USB供电', price: 35, keyword: '星光守护', sku: '100014785236', image: 'https://img14.360buyimg.com/n0/jfs/t1/123460/1/1238/123460.jpg', emoji: '✨', boxNum: 'A' },
+                    { name: '香薰蜡烛套装', desc: '天然大豆蜡，6种香型组合，燃烧40小时', price: 32, keyword: '香氛浪漫', sku: '100018965472', image: 'https://img14.360buyimg.com/n0/jfs/t1/123461/1/1239/123461.jpg', emoji: '🕯️', boxNum: 'B' },
+                    { name: '暖手宝充电宝二合一', desc: '5200mAh大容量，3秒速热，可上飞机', price: 33, keyword: '温暖守护', sku: '100021547896', image: 'https://img14.360buyimg.com/n0/jfs/t1/123462/1/1240/123462.jpg', emoji: '🔥', boxNum: 'C' }
+                ],
+                cute: [
+                    { name: '芒果精灵玩偶', desc: '30cm超萌芒果造型，水晶超柔面料', price: 36, keyword: '萌力全开', sku: '100025896347', image: 'https://img14.360buyimg.com/n0/jfs/t1/123465/1/1243/123465.jpg', emoji: '🥭', boxNum: 'A' },
+                    { name: '毛绒钥匙扣', desc: '超软兔毛材质，12cm挂饰，多种动物造型', price: 16, keyword: '萌趣随行', sku: '100028741596', image: 'https://img14.360buyimg.com/n0/jfs/t1/123466/1/1244/123466.jpg', emoji: '🧸', boxNum: 'B' },
+                    { name: '卡通发夹套装', desc: '12件套装，多种可爱造型，不伤发设计', price: 15, keyword: '甜美可爱', sku: '100031254789', image: 'https://img14.360buyimg.com/n0/jfs/t1/123467/1/1245/123467.jpg', emoji: '🎀', boxNum: 'C' }
+                ],
+                tech: [
+                    { name: '迷你蓝牙音箱', desc: '360度环绕立体声，蓝牙5.0连接，8小时续航', price: 49, keyword: '声动人心', sku: '100034567891', image: 'https://img14.360buyimg.com/n0/jfs/t1/123470/1/1248/123470.jpg', emoji: '🔊', boxNum: 'A' },
+                    { name: '创意手机支架', desc: '360度旋转，多档位调节，折叠便携', price: 18, keyword: '解放双手', sku: '100037894561', image: 'https://img14.360buyimg.com/n0/jfs/t1/123471/1/1249/123471.jpg', emoji: '📱', boxNum: 'B' },
+                    { name: 'LED小夜灯', desc: '智能光感感应，柔和暖光不刺眼，USB供电', price: 28, keyword: '温暖微光', sku: '100041237856', image: 'https://img14.360buyimg.com/n0/jfs/t1/123472/1/1250/123472.jpg', emoji: '💡', boxNum: 'C' }
+                ]
+            };
+            
+            let gifts = defaults[category] || defaults.cute;
+            gifts = gifts.filter(g => g.price <= budget);
+            return gifts.length >= 3 ? gifts : [...gifts, ...defaults.cute].slice(0, 3);
+        }
+
+        // ==================== 盲盒页面 ====================
+        function renderBlindbox() {
+            const container = document.getElementById('blindbox-container');
+            container.innerHTML = recommendedGifts.map((gift, index) => `
+                <div class="blindbox-item" onclick="selectBlindbox(${index}, this)">
+                    <div class="blindbox-content">
+                        <div class="question-mark">?</div>
+                        <div class="blindbox-num">盲盒 ${gift.boxNum}</div>
+                        <span class="keyword-tag">${gift.keyword}</span>
+                        <div class="price-hint">¥${Math.max(0, gift.price - 10).toFixed(2)} - ¥${(gift.price + 10).toFixed(2)}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function selectBlindbox(index, element) {
+            // 添加选中动画
+            document.querySelectorAll('.blindbox-item').forEach(el => {
+                el.classList.remove('selected');
+                el.style.opacity = '0.5';
+            });
+            element.classList.add('selected');
+            element.style.opacity = '1';
+            
+            selectedGift = recommendedGifts[index];
+            
+            // 记录用户选择
+            logSelection(
+                currentMessage, 
+                selectedBudget, 
+                selectedGift.boxNum,
+                selectedGift.name,
+                selectedGift.price
+            );
+            
+            // 延迟后揭晓
+            setTimeout(() => {
+                revealGift();
+            }, 800);
+        }
+        
+        // ==================== 揭晓页面 ====================
+        function revealGift() {
+            const imageEl = document.getElementById('gift-image');
+            
+            // 方案B：直接显示emoji，不加载图片
+            imageEl.textContent = selectedGift.emoji || '🎁';
+            imageEl.style.fontSize = '80px';
+            imageEl.style.display = 'flex';
+            imageEl.style.alignItems = 'center';
+            imageEl.style.justifyContent = 'center';
+            
+            document.getElementById('gift-name').textContent = selectedGift.name;
+            document.getElementById('gift-desc').textContent = selectedGift.desc;
+            document.getElementById('gift-price').textContent = `¥${parseFloat(selectedGift.price).toFixed(2)}`;
+            
+            // 生成推荐理由
+            const reason = selectedGift.desc || `AI根据你的寄语"${currentMessage}"，为你精选了这个${selectedGift.keyword}主题的礼物`;
+            document.getElementById('recommend-text').textContent = reason;
+            
+            goToPage('page-reveal');
+        }
+        
+        // ==================== 京东跳转 ====================
+        async function goToJD() {
+            // 记录购买点击
+            await logClick(selectedGift.name, selectedGift.price, selectedGift.keyword);
+            
+            // 显示跳转提示页
+            goToPage('page-redirect');
+            
+            // 调用后端生成京东链接（通过SKU）
+            try {
+                const response = await fetch(`${API_BASE}/api/jd-link`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        sku: selectedGift.sku,
+                        name: selectedGift.name,
+                        price: selectedGift.price
+                    })
+                });
+                const data = await response.json();
+                
+                if (data.success && data.data.url) {
+                    setTimeout(() => {
+                        window.open(data.data.url, '_blank');
+                    }, 2000);
+                } else {
+                    // 备用：直接搜索
+                    const searchUrl = `https://search.jd.com/Search?keyword=${encodeURIComponent(selectedGift.name)}&enc=utf-8`;
+                    setTimeout(() => {
+                        window.open(searchUrl, '_blank');
+                    }, 2000);
+                }
+            } catch (e) {
+                // 出错时用备用链接
+                const searchUrl = `https://search.jd.com/Search?keyword=${encodeURIComponent(selectedGift.name)}&enc=utf-8`;
+                setTimeout(() => {
+                    window.open(searchUrl, '_blank');
+                }, 2000);
+            }
+        }
+        
+        // ==================== 初始化 ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            initBgDecoration();
+        });
+    </script>
+</body>
+</html>

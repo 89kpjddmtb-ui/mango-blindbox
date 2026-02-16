@@ -1,0 +1,49 @@
+/**reveal.wxml**/
+<view class="container">
+  <view class="reveal-header">
+    <view class="sparkles">✨ 🎉 ✨</view>
+    <text class="reveal-title">揭晓时刻！</text>
+    
+    <view class="mango-mascot bounce">
+      <view class="mango-body-mini">
+        <view class="eyes">
+          <view class="eye"></view>
+          <view class="eye"></view>
+        </view>
+        <view class="mouth happy"></view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="gift-reveal-card">
+    <view class="gift-image">🎁</view>
+    
+    <view class="gift-content">
+      <text class="gift-name">{{gift.name}}</text>
+      <text class="gift-desc">{{gift.desc}}</text>
+      
+      <view class="gift-price-row">
+        <text class="gift-price">¥{{gift.price}}</text>
+        <view class="platform-badge">{{gift.platform}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="match-reason" wx:if="{{message}}">
+    <view class="reason-title">🎯 为什么推荐这个？</view>
+    <view class="reason-content">
+      <text class="user-message">你说："{{message}}"</text>
+      <text class="ai-reason">AI理解你想要{{keyword}}相关的礼物，这款{{gift.name}}正好契合你的心意~</text>
+    </view>
+  </view>
+  
+  <view class="action-area">
+    <button class="btn-primary" bindtap="goToPayment"㹬
+      立即购买 ¥{{gift.price}}
+    </button>
+    
+    <button class="btn-secondary" bindtap="goBack">
+      重新选择
+    </button>
+  </view>
+</view>

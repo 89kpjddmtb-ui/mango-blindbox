@@ -1,0 +1,152 @@
+/**wechat-auth.wxss**/
+.container {
+  padding: 40rpx;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9F0 0%, #FFFFFF 100%);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 60rpx;
+  margin-top: 40rpx;
+}
+
+.mango-body {
+  width: 80px;
+  height: 95px;
+  background: linear-gradient(145deg, #FFB347, #FF8C42);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  margin: 0 auto 30rpx;
+  box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+}
+
+.mango-body .leaf {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 18px;
+  background: linear-gradient(135deg, #7CB342, #558B2F);
+  border-radius: 0 100% 0 100%;
+}
+
+.mango-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+}
+
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.eye {
+  width: 10px;
+  height: 12px;
+  background: #2C3E50;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 18px;
+  height: 9px;
+  border-bottom: 2px solid #2C3E50;
+  border-radius: 0 0 18px 18px;
+  margin: 0 auto;
+}
+
+.auth-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.auth-desc {
+  font-size: 14px;
+  color: #7F8C8D;
+}
+
+.auth-list {
+  background: white;
+  border-radius: 20px;
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.auth-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.auth-item:last-child {
+  border-bottom: none;
+}
+
+.auth-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #FFB347, #FF6B35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20rpx;
+}
+
+.auth-content {
+  flex: 1;
+}
+
+.auth-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 5px;
+}
+
+.auth-detail {
+  font-size: 13px;
+  color: #999;
+}
+
+.auth-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 60rpx;
+  padding: 15px;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 10px;
+}
+
+.notice-icon {
+  font-size: 16px;
+}
+
+.notice-text {
+  font-size: 13px;
+  color: #4ECDC4;
+}
+
+.action-area {
+  margin-top: auto;
+}
+
+.btn-secondary {
+  margin-top: 20rpx;
+  background: transparent;
+  color: #7F8C8D;
+  border: 2rpx solid #DDD;
+}

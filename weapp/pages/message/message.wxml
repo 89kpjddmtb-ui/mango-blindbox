@@ -1,0 +1,54 @@
+/**message.wxml**/
+<view class="container">
+  <view class="progress-bar">
+    <view class="progress-step active">1</view>
+    <view class="progress-line"></view>
+    <view class="progress-step">2</view>
+    <view class="progress-line"></view>
+    <view class="progress-step">3</view>
+  </view>
+  
+  <text class="step-title">写下你的心意寄语</text>
+  <text class="step-subtitle">AI将根据你的话语，为你挑选最贴心的礼物</text>
+  
+  <view class="input-area">
+    <textarea 
+      class="message-input" 
+      placeholder="例如：我就是超人，想给自己一个惊喜奖励..."
+      placeholder-class="placeholder"
+      maxlength="100"
+      bindinput="onInput"
+      value="{{message}}"
+    />
+    <view class="input-footer">
+      <text class="hint">💡 可以描述收礼人的性格、你们的回忆或你想表达的情感</text>
+      <text class="char-count" class="{{message.length > 80 ? 'warning' : ''}}">{{message.length}}/100</text>
+    </view>
+  </view>
+  
+  <!-- 示例寄语 -->
+  <view class="examples" wx:if="{{!message}}">
+    <text class="examples-title">参考示例：</text>
+    <view class="example-tags">
+      <view 
+        class="example-tag" 
+        wx:for="{{examples}}" 
+        wx:key="index"
+        bindtap="selectExample"
+        data-text="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+  
+  <view class="action-area">
+    <button 
+      class="btn-primary {{!message ? 'disabled' : ''}}" 
+      bindtap="nextStep"
+      disabled="{{!message}}"
+    >
+      下一步：选择预算
+    </button>
+  </view>
+</view>

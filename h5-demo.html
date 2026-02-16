@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>芒果精灵盲盒</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            background: linear-gradient(180deg, #FFF9F0 0%, #FFE4C4 100%);
+            min-height: 100vh;
+        }
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #FFF9F0 0%, #FFE4C4 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+        .page {
+            display: none;
+            padding: 40px 20px;
+            min-height: 100vh;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* 芒果精灵 */
+        .mango-mascot {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .mango-body {
+            width: 120px;
+            height: 140px;
+            background: linear-gradient(145deg, #FFB347, #FF8C42);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .mango-body .leaf {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(135deg, #7CB342, #558B2F);
+            border-radius: 0 100% 0 100%;
+            animation: leafSway 2.5s ease-in-out infinite;
+        }
+        @keyframes leafSway {
+            0%, 100% { transform: translateX(-50%) rotate(-10deg); }
+            50% { transform: translateX(-50%) rotate(10deg); }
+        }
+        .mango-face {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+        }
+        .eyes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .eye {
+            width: 14px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: blink 4s infinite;
+        }
+        @keyframes blink {
+            0%, 96%, 100% { transform: scaleY(1); }
+            98% { transform: scaleY(0.1); }
+        }
+        .eye::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 10px;
+            background: #5D4E37;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .eye::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            top: 3px;
+            right: 2px;
+            z-index: 1;
+        }
+        .cheeks {
+            position: absolute;
+            top: 28px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+        }
+        .cheek {
+            width: 15px;
+            height: 10px;
+            background: rgba(255, 138, 128, 0.4);
+            border-radius: 50%;
+        }
+        .mouth {
+            width: 25px;
+            height: 12px;
+            border-bottom: 3px solid #5D4E37;
+            border-radius: 0 0 25px 25px;
+            margin: 0 auto;
+        }
+        
+        /* 标题 */
+        .header-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B35, #FFB347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #7F8C8D;
+        }
+        
+        /* 按钮 */
+        .btn-primary {
+            background: linear-gradient(135deg, #FFB347 0%, #FF6B35 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 15px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+            transition: all 0.2s;
+        }
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background: white;
+            color: #FF6B35;
+            border: 2px solid #FF6B35;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 16px;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        /* 进度条 */
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        .progress-step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #E8E8E8;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .progress-step.active {
+            background: linear-gradient(135deg, #FFB347, #FF6B35);
+            color: white;
+        }
+        .progress-step.done {
+            background: #52C41A;
+            color: white;
+        }
+        .progress-line {
+            flex: 1;
+            height: 3px;
+            background: #E8E8E8;
+            margin: 0 10px;
+        }
+        .progress-line.active {
+            background: linear-gradient(90deg, #FFB347, #FF6B35);
+        }
+        
+        /* 输入框 */
+        .input-area {
+            margin-bottom: 30px;
+        }
+        .message-input {
+            width: 100%;
+            height: 150px;
+            background: white;
+            border: 2px solid #E8E8E8;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .message-input:focus {
+            border-color: #FFB347;
+            box-shadow: 0 0 0 4px rgba(255, 179, 71, 0.2);
+        }
+        .input-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* 示例标签 */
+        .examples {
+            margin-bottom: 40px;
+        }
+        .examples-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .example-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .example-tag {
+            background: rgba(255, 179, 71, 0.15);
+            color: #FF6B35;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .example-tag:hover {
+            background: rgba(255, 179, 71, 0.3);
+        }
+        
+        /* 预算选项 */
+        .budget-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .budget-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .budget-card:hover {
+            transform: translateY(-2px);
+        }
+        .budget-card.active {
+            border-color: #FF6B35;
+            background: linear-gradient(145deg, rgba(255, 179, 71, 0.05), rgba(255, 107, 53, 0.1));
+        }
+        .budget-amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FF6B35;
+            margin-bottom: 5px;
+        }
+        .budget-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .budget-tag {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.15);
+            color: #4ECDC4;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        
+        /* 盲盒 */
+        .blindbox-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .blindbox-item {
+            flex: 1;
+            background: linear-gradient(145deg, #FFB347, #FF6B35);
+            border-radius: 20px;
+            padding: 25px 10px;
+            text-align: center;
+            cursor: pointer;
+            border: 4px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .blindbox-item:hover {
+            transform: translateY(-5px);
+        }
+        .blindbox-item.selected {
+            border-color: #FFE66D;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+        .blindbox-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        .blindbox-item .content {
+            position: relative;
+            z-index: 1;
+        }
+        .question-mark {
+            font-size: 40px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+        }
+        .blindbox-num {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+        }
+        .keyword-hint {
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+        }
+        .keyword-tag {
+            background: rgba(255,255,255,0.25);
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        /* 礼物揭晓 */
+        .gift-reveal {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+            margin-bottom: 30px;
+            animation: popIn 0.5s ease;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .gift-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .gift-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+        .gift-desc {
+            font-size: 14px;
+            color: #7F8C8D;
+            margin-bottom: 20px;
+        }
+        .gift-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FF6B35;
+        }
+        .platform-badge {
+            background: rgba(78, 205, 196, 0.15);
+            color: #4ECDC4;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        /* 支付方式 */
+        .payment-method {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .payment-method:hover {
+            background: #FAFAFA;
+        }
+        .payment-method.active {
+            border-color: #FF6B35;
+            background: rgba(255, 107, 53, 0.05);
+        }
+        .method-icon {
+            font-size: 28px;
+            margin-right: 15px;
+        }
+        .method-info {
+            flex: 1;
+        }
+        .method-name {
+            font-weight: 600;
+            color: #2C3E50;
+            margin-bottom: 3px;
+        }
+        .method-desc {
+            font-size: 12px;
+            color: #999;
+        }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #FF6B35;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        /* 价格明细 */
+        .price-detail {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #EEE;
+        }
+        .price-row:last-child {
+            border-bottom: none;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px solid #F0F0F0;
+        }
+        .price-label {
+            color: #666;
+        }
+        .price-value {
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        .price-total {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FF6B35;
+        }
+        
+        /* 订单成功 */
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #52C41A, #389E0D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin: 0 auto 30px;
+            color: white;
+            animation: scaleIn 0.5s ease;
+        }
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        .success-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #52C41A;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .order-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .order-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #F5F5F5;
+        }
+        .order-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .section-label {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .section-value {
+            font-size: 16px;
+            color: #2C3E50;
+            font-weight: 500;
+        }
+        .order-id-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .copy-btn {
+            background: rgba(255, 107, 53, 0.1);
+            color: #FF6B35;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        /* 加载动画 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #F0F0F0;
+            border-top-color: #FF6B35;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <!-- 页面1: 首页 -->
+        <div class="page active" id="page-index">
+            <div class="mango-mascot">
+                <div class="mango-body">
+                    <div class="leaf"></div>
+                    <div class="mango-face">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div class="cheeks">
+                            <div class="cheek"></div>
+                            <div class="cheek"></div>
+                        </div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-title">
+                <div class="title">芒果精灵盲盒</div>
+                <div class="subtitle">每一份礼物都是惊喜</div>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 50px;">
+                <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 5px;">🎁</div>
+                        <div style="font-size: 14px; color: #666;">AI智能推荐</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 5px;">✨</div>
+                        <div style="font-size: 14px; color: #666;">神秘盲选</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 5px;">💝</div>
+                        <div style="font-size: 14px; color: #666;">惊喜礼物</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn-primary" onclick="goToPage('page-message')">
+                🎊 开启盲盒之旅
+            </button>
+            
+            <p style="text-align: center; font-size: 14px; color: #999; margin-top: 20px;">
+                写下寄语，让AI为你挑选心意礼物
+            </p>
+        </div>
+        
+        <!-- 页面2: 输入寄语 -->
+        <div class="page" id="page-message">
+            <div class="progress-bar">
+                <div class="progress-step active">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">3</div>
+            </div>
+            
+            <div class="header-title">
+                <div class="title" style="font-size: 24px;">写下你的心意寄语</div>
+                <div class="subtitle">AI将根据你的话语，为你挑选最贴心的礼物</div>
+            </div>
+            
+            <div class="input-area">
+                <textarea 
+                    class="message-input" 
+                    id="message-input"
+                    placeholder="例如：我就是超人，想给自己一个惊喜奖励..."
+                    maxlength="100"
+                ></textarea>
+                <div class="input-footer">
+                    <span>💡 可以描述收礼人的性格、你们的回忆或你想表达的情感</span>
+                    <span id="char-count">0/100</span>
+                </div>
+            </div>
+            
+            <div class="examples">
+                <span class="examples-title">参考示例：</span>
+                <div class="example-tags">
+                    <span class="example-tag" onclick="setMessage('我就是超人，为自己加油')">我就是超人</span>
+                    <span class="example-tag" onclick="setMessage('送给最温暖的你')">送给最温暖的你</span>
+                    <span class="example-tag" onclick="setMessage('谢谢你一直以来的陪伴')">谢谢你一直以来的陪伴</span>
+                    <span class="example-tag" onclick="setMessage('愿你每天都被可爱包围')">愿你每天都被可爱包围</span>
+                </div>
+            </div>
+            
+            <button class="btn-primary" id="btn-next" onclick="goToBudget()" disabled>
+                下一步：选择预算
+            </button>
+            
+            <button class="btn-secondary" onclick="goToPage('page-index')">
+                返回首页
+            </button>
+        </div>
+        
+        <script>
+            let currentMessage = '';
+            let selectedBudget = null;
+            let recommendedGifts = [];
+            let selectedGift = null;
+            let currentOrder = null;
+            
+            const API_BASE = 'http://localhost:3000';
+            
+            function goToPage(pageId) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
+                window.scrollTo(0, 0);
+            }
+            
+            // 寄语页面
+            const messageInput = document.getElementById('message-input');
+            const charCount = document.getElementById('char-count');
+            const btnNext = document.getElementById('btn-next');
+            
+            messageInput.addEventListener('input', function() {
+                currentMessage = this.value;
+                charCount.textContent = currentMessage.length + '/100';
+                btnNext.disabled = currentMessage.length === 0;
+            });
+            
+            function setMessage(text) {
+                messageInput.value = text;
+                currentMessage = text;
+                charCount.textContent = text.length + '/100';
+                btnNext.disabled = false;
+            }
+            
+            function goToBudget() {
+                if (!currentMessage.trim()) return;
+                goToPage('page-budget');
+            }
+            
+            // 预算页面动态生成
+            document.addEventListener('DOMContentLoaded', function() {
+                // 这里会继续添加其他页面的逻辑
+            });
+        </script>
+    </div>
+</body>
+</html>
