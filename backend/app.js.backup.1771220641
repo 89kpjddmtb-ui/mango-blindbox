@@ -8,9 +8,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 
-// 登录配置 - 从环境变量读取，提供默认值
-const ADMIN_USERNAME = process.env.ADMIN_USER || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASS || 'mangguojingling2027';
+// 登录配置
+const ADMIN_USERNAME = 'admin1234';
+const ADMIN_PASSWORD = 'mangguojingling2027';
 const sessions = new Map(); // 简单的 session 存储
 
 // 内存存储
@@ -41,17 +41,8 @@ async function saveData() {
   }
 }
 
-// 中间件 - CORS 限制只允许 GitHub Pages 和本地开发
-const corsOptions = {
-  origin: [
-    'https://89kpjddmtb-ui.github.io',
-    'http://localhost:3000',
-    'http://localhost:8080'
-  ],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-};
-app.use(cors(corsOptions));
+// 中间件
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -102,11 +93,7 @@ app.use('/admin', (req, res, next) => {
   next();
 });
 
-// 静态文件服务 - 只提供前端必要文件
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
-});
-app.use('/images', express.static(path.join(__dirname, '../product-images')));
+app.use(express.static(path.join(__dirname, '../')));
 
 // ==================== 京东联盟配置（已移至 jd-union.js）====================
 
