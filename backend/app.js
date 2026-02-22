@@ -7,7 +7,9 @@ const { generatePromotionLink, searchGoods } = require('./jd-union');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DATA_FILE = path.join(__dirname, 'data.json');
+// 使用环境变量指定数据目录，Railway 可挂载 Volume 持久化
+const DATA_DIR = process.env.DATA_DIR || __dirname;
+const DATA_FILE = path.join(DATA_DIR, 'data.json');
 
 // 登录配置 - 从环境变量读取，提供默认值
 const ADMIN_USERNAME = process.env.ADMIN_USER || 'admin';
@@ -25,6 +27,22 @@ let analytics = {
 // 数据持久化
 async function loadData() {
   try {
+    // 首先尝试从历史数据文件恢复
+    const historyDataFile = path.join(__dirname, 'history-data.json');
+    try {
+      const historyData = await fs.readFile(historyDataFile, 'utf8');
+      const historyAnalytics = JSON.parse(historyData);
+      // 只要有历史数据就恢复到 Volume
+      if (historyAnalytics.visits && historyAnalytics.visits.length > 0) {
+        analytics = historyAnalytics;
+        await fs.writeFile(DATA_FILE, JSON.stringify(analytics, null, 2));
+        console.log(`📊 已恢复历史数据: ${analytics.visits.length}条访问记录`);
+        return;
+      }
+    } catch (historyErr) {
+      // 历史数据文件不存在，继续正常加载
+    }
+    
     const data = await fs.readFile(DATA_FILE, 'utf8');
     analytics = JSON.parse(data);
     console.log('📊 数据已加载');

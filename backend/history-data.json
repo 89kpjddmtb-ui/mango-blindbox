@@ -1,0 +1,2468 @@
+{
+  "visits": [
+    {
+      "id": "visit_1771168129683_iatf1u",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:08:49.683Z"
+    },
+    {
+      "id": "visit_1771168138683_fpcdlj",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:08:58.683Z"
+    },
+    {
+      "id": "visit_1771168143569_stro7p",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:03.569Z"
+    },
+    {
+      "id": "visit_1771168146075_ira99i",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:06.075Z"
+    },
+    {
+      "id": "visit_1771168148678_c7uout",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:08.678Z"
+    },
+    {
+      "id": "visit_1771168154641_7brmlt",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:14.641Z"
+    },
+    {
+      "id": "visit_1771168159913_23xwgy",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:19.913Z"
+    },
+    {
+      "id": "visit_1771168161426_kafx1l",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:21.426Z"
+    },
+    {
+      "id": "visit_1771168163475_ci56ze",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:23.475Z"
+    },
+    {
+      "id": "visit_1771168169436_c8c269",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:09:29.436Z"
+    },
+    {
+      "id": "visit_1771168487676_lg8fbb",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:14:47.676Z"
+    },
+    {
+      "id": "visit_1771168495192_7jwynv",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:14:55.192Z"
+    },
+    {
+      "id": "visit_1771168499959_vip63a",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:14:59.959Z"
+    },
+    {
+      "id": "visit_1771168502466_zn8mm0",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:02.466Z"
+    },
+    {
+      "id": "visit_1771168504993_fh7yw8",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:04.993Z"
+    },
+    {
+      "id": "visit_1771168514510_tabcp3",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:14.510Z"
+    },
+    {
+      "id": "visit_1771168516286_zzb9xb",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:16.286Z"
+    },
+    {
+      "id": "visit_1771168519745_j4z1af",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:19.745Z"
+    },
+    {
+      "id": "visit_1771168521526_8wy0nd",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:21.526Z"
+    },
+    {
+      "id": "visit_1771168532161_d3jg75",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:32.161Z"
+    },
+    {
+      "id": "visit_1771168550932_znlf5i",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:50.932Z"
+    },
+    {
+      "id": "visit_1771168552264_ozzqyi",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:52.264Z"
+    },
+    {
+      "id": "visit_1771168554320_zijjf4",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:54.320Z"
+    },
+    {
+      "id": "visit_1771168557699_dkj11d",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:15:57.699Z"
+    },
+    {
+      "id": "visit_1771168560203_wuf9lu",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:00.203Z"
+    },
+    {
+      "id": "visit_1771168563087_d6wvhi",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:03.087Z"
+    },
+    {
+      "id": "visit_1771168567596_42zi2b",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:07.596Z"
+    },
+    {
+      "id": "visit_1771168586467_defje8",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:26.467Z"
+    },
+    {
+      "id": "visit_1771168588161_su5vj1",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:28.162Z"
+    },
+    {
+      "id": "visit_1771168590620_op77ab",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:30.620Z"
+    },
+    {
+      "id": "visit_1771168593720_gul82u",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:33.720Z"
+    },
+    {
+      "id": "visit_1771168596226_dmh8p7",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:36.226Z"
+    },
+    {
+      "id": "visit_1771168602382_4c4ema",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:42.382Z"
+    },
+    {
+      "id": "visit_1771168604502_vx93hx",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:44.502Z"
+    },
+    {
+      "id": "visit_1771168607008_fvjxqq",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:47.008Z"
+    },
+    {
+      "id": "visit_1771168613884_6v9jbj",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:53.884Z"
+    },
+    {
+      "id": "visit_1771168616300_v0x8tt",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:16:56.300Z"
+    },
+    {
+      "id": "visit_1771169375423_3l39j0",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:35.423Z"
+    },
+    {
+      "id": "visit_1771169383930_imga7c",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:43.930Z"
+    },
+    {
+      "id": "visit_1771169386596_s7bibs",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:46.596Z"
+    },
+    {
+      "id": "visit_1771169389103_oh39jt",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:49.103Z"
+    },
+    {
+      "id": "visit_1771169391481_nuy2lf",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:51.481Z"
+    },
+    {
+      "id": "visit_1771169398703_1osros",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:29:58.703Z"
+    },
+    {
+      "id": "visit_1771169416165_tmicu0",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:16.165Z"
+    },
+    {
+      "id": "visit_1771169417365_boae9b",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:17.365Z"
+    },
+    {
+      "id": "visit_1771169421252_b9okk7",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:21.252Z"
+    },
+    {
+      "id": "visit_1771169424000_h8dhp9",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:24.000Z"
+    },
+    {
+      "id": "visit_1771169426507_wgncq4",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:26.507Z"
+    },
+    {
+      "id": "visit_1771169428816_olu62a",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:28.816Z"
+    },
+    {
+      "id": "visit_1771169445478_s61zi3",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:45.478Z"
+    },
+    {
+      "id": "visit_1771169449136_avi8id",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:49.136Z"
+    },
+    {
+      "id": "visit_1771169451236_k7o0he",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:51.236Z"
+    },
+    {
+      "id": "visit_1771169453741_sstas6",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:53.741Z"
+    },
+    {
+      "id": "visit_1771169456028_c2rnws",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:30:56.028Z"
+    },
+    {
+      "id": "visit_1771169461721_mbx7wo",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:31:01.721Z"
+    },
+    {
+      "id": "visit_1771169544388_qypijb",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:24.388Z"
+    },
+    {
+      "id": "visit_1771169546561_pewkgj",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:26.561Z"
+    },
+    {
+      "id": "visit_1771169559446_7w9m5s",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:39.446Z"
+    },
+    {
+      "id": "visit_1771169561724_5e0bha",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:41.724Z"
+    },
+    {
+      "id": "visit_1771169564235_98iszl",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:44.235Z"
+    },
+    {
+      "id": "visit_1771169572593_drid5q",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:52.593Z"
+    },
+    {
+      "id": "visit_1771169577391_lzkdde",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:57.391Z"
+    },
+    {
+      "id": "visit_1771169579148_r63iyk",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:32:59.148Z"
+    },
+    {
+      "id": "visit_1771169583142_xl3q1d",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:33:03.142Z"
+    },
+    {
+      "id": "visit_1771169584758_qsuf2a",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:33:04.758Z"
+    },
+    {
+      "id": "visit_1771169590948_scjx4a",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T15:33:10.948Z"
+    },
+    {
+      "id": "visit_1771174289453_nu8fb9",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:29.453Z"
+    },
+    {
+      "id": "visit_1771174294743_5p7zxm",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:34.743Z"
+    },
+    {
+      "id": "visit_1771174297622_45btd4",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:37.622Z"
+    },
+    {
+      "id": "visit_1771174300130_aohr2x",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:40.130Z"
+    },
+    {
+      "id": "visit_1771174305222_rcl9ap",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:45.222Z"
+    },
+    {
+      "id": "visit_1771174317423_u9c4aq",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:57.423Z"
+    },
+    {
+      "id": "visit_1771174319033_z2pdok",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:51:59.033Z"
+    },
+    {
+      "id": "visit_1771174322191_hdwyeh",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:02.191Z"
+    },
+    {
+      "id": "visit_1771174324058_1gcdkx",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:04.058Z"
+    },
+    {
+      "id": "visit_1771174327938_kya9ay",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:07.938Z"
+    },
+    {
+      "id": "visit_1771174331591_l4lh0h",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:11.591Z"
+    },
+    {
+      "id": "visit_1771174333690_5kelxr",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:13.690Z"
+    },
+    {
+      "id": "visit_1771174344857_lwxisj",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:24.857Z"
+    },
+    {
+      "id": "visit_1771174348830_tprdzi",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:28.830Z"
+    },
+    {
+      "id": "visit_1771174352118_nwrcz2",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:32.118Z"
+    },
+    {
+      "id": "visit_1771174354060_z3vjil",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:34.060Z"
+    },
+    {
+      "id": "visit_1771174356567_va5wh7",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:36.567Z"
+    },
+    {
+      "id": "visit_1771174358948_7dq7pv",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:38.948Z"
+    },
+    {
+      "id": "visit_1771174363795_hibi70",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:43.795Z"
+    },
+    {
+      "id": "visit_1771174378082_tslp0r",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:52:58.082Z"
+    },
+    {
+      "id": "visit_1771174487749_pkgpae",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:54:47.749Z"
+    },
+    {
+      "id": "visit_1771174491842_sny7ke",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:54:51.842Z"
+    },
+    {
+      "id": "visit_1771174494602_fzgvf3",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:54:54.602Z"
+    },
+    {
+      "id": "visit_1771174497108_73ftqv",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:54:57.108Z"
+    },
+    {
+      "id": "visit_1771174499085_o7ahlh",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:54:59.085Z"
+    },
+    {
+      "id": "visit_1771174504936_l8cw2d",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:04.936Z"
+    },
+    {
+      "id": "visit_1771174515888_3f83e6",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:15.888Z"
+    },
+    {
+      "id": "visit_1771174519275_wwp3s8",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:19.275Z"
+    },
+    {
+      "id": "visit_1771174522127_u9927w",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:22.127Z"
+    },
+    {
+      "id": "visit_1771174524101_fwgycn",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:24.101Z"
+    },
+    {
+      "id": "visit_1771174526607_hdxf36",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:26.607Z"
+    },
+    {
+      "id": "visit_1771174530307_m09m4w",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:30.307Z"
+    },
+    {
+      "id": "visit_1771174535605_7aiuli",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:55:35.605Z"
+    },
+    {
+      "id": "visit_1771174790046_e4btd4",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:59:50.047Z"
+    },
+    {
+      "id": "visit_1771174792714_47k5p7",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:59:52.714Z"
+    },
+    {
+      "id": "visit_1771174796206_w84u4g",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:59:56.206Z"
+    },
+    {
+      "id": "visit_1771174797786_qg8r8z",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T16:59:57.786Z"
+    },
+    {
+      "id": "visit_1771174800294_l3hcm6",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:00:00.294Z"
+    },
+    {
+      "id": "visit_1771174818594_qpijlm",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:00:18.594Z"
+    },
+    {
+      "id": "visit_1771174822404_qmpsmg",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:00:22.404Z"
+    },
+    {
+      "id": "visit_1771174833211_k2u3zv",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:00:33.211Z"
+    },
+    {
+      "id": "visit_1771174885953_gaam1y",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:01:25.953Z"
+    },
+    {
+      "id": "visit_1771174890855_8mzrjd",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:01:30.856Z"
+    },
+    {
+      "id": "visit_1771174893273_5xgeoo",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:01:33.273Z"
+    },
+    {
+      "id": "visit_1771174895779_ceu7y8",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:01:35.779Z"
+    },
+    {
+      "id": "visit_1771174960253_2z9wad",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:02:40.253Z"
+    },
+    {
+      "id": "visit_1771174962776_o5k0h5",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:02:42.776Z"
+    },
+    {
+      "id": "visit_1771175201421_aoysk3",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:41.421Z"
+    },
+    {
+      "id": "visit_1771175206247_9mleb2",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:46.247Z"
+    },
+    {
+      "id": "visit_1771175208581_nj43la",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:48.581Z"
+    },
+    {
+      "id": "visit_1771175211089_r8ye8t",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:51.089Z"
+    },
+    {
+      "id": "visit_1771175216609_1mi627",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:56.609Z"
+    },
+    {
+      "id": "visit_1771175218992_m9ubp7",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:06:58.992Z"
+    },
+    {
+      "id": "visit_1771175232009_b99xuv",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:12.009Z"
+    },
+    {
+      "id": "visit_1771175232662_eqnutc",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:12.662Z"
+    },
+    {
+      "id": "visit_1771175234675_vfys09",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:14.675Z"
+    },
+    {
+      "id": "visit_1771175236478_9dooxg",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:16.478Z"
+    },
+    {
+      "id": "visit_1771175238986_iwieut",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:18.986Z"
+    },
+    {
+      "id": "visit_1771175243949_j4pt1e",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:23.949Z"
+    },
+    {
+      "id": "visit_1771175246099_tmalay",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:07:26.099Z"
+    },
+    {
+      "id": "visit_1771175427303_3bwqou",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:27.303Z"
+    },
+    {
+      "id": "visit_1771175430800_fye003",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:30.800Z"
+    },
+    {
+      "id": "visit_1771175433270_e5m07i",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:33.270Z"
+    },
+    {
+      "id": "visit_1771175435775_jea9xu",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:35.775Z"
+    },
+    {
+      "id": "visit_1771175447228_ikuq82",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:47.228Z"
+    },
+    {
+      "id": "visit_1771175450320_50psxf",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:10:50.320Z"
+    },
+    {
+      "id": "visit_1771175460364_ojn71d",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:11:00.364Z"
+    },
+    {
+      "id": "visit_1771175461368_ykhwm0",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:11:01.368Z"
+    },
+    {
+      "id": "visit_1771175463990_d18230",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:11:03.990Z"
+    },
+    {
+      "id": "visit_1771175465890_zz88ay",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:11:05.890Z"
+    },
+    {
+      "id": "visit_1771175468395_r1aplo",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:11:08.395Z"
+    },
+    {
+      "id": "visit_1771175555207_z2prz2",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:12:35.207Z"
+    },
+    {
+      "id": "visit_1771175562978_5uw3h8",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:12:42.978Z"
+    },
+    {
+      "id": "visit_1771175566544_qmwx95",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:12:46.544Z"
+    },
+    {
+      "id": "visit_1771175569050_xkcsp4",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:12:49.050Z"
+    },
+    {
+      "id": "visit_1771175574382_xguzj0",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:12:54.382Z"
+    },
+    {
+      "id": "visit_1771175581547_f9kydx",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:01.547Z"
+    },
+    {
+      "id": "visit_1771175583078_sn0ue3",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:03.078Z"
+    },
+    {
+      "id": "visit_1771175587750_qrns19",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:07.750Z"
+    },
+    {
+      "id": "visit_1771175608911_242dys",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:28.911Z"
+    },
+    {
+      "id": "visit_1771175615730_krmsv4",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:35.730Z"
+    },
+    {
+      "id": "visit_1771175618210_s314q2",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:38.210Z"
+    },
+    {
+      "id": "visit_1771175622301_368ifn",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:13:42.301Z"
+    },
+    {
+      "id": "visit_1771175641683_oaw6k0",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:14:01.683Z"
+    },
+    {
+      "id": "visit_1771175644649_vwzxr2",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:14:04.649Z"
+    },
+    {
+      "id": "visit_1771175647154_flm7e5",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:14:07.154Z"
+    },
+    {
+      "id": "visit_1771175670681_fwisv3",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:14:30.681Z"
+    },
+    {
+      "id": "visit_1771175673085_ar4114",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:14:33.085Z"
+    },
+    {
+      "id": "visit_1771175897689_695cun",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:17.689Z"
+    },
+    {
+      "id": "visit_1771175907766_74omo0",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:27.766Z"
+    },
+    {
+      "id": "visit_1771175921951_ovoyur",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:41.951Z"
+    },
+    {
+      "id": "visit_1771175924458_n1hrzh",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:44.458Z"
+    },
+    {
+      "id": "visit_1771175929300_h67wvx",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:49.300Z"
+    },
+    {
+      "id": "visit_1771175932331_qo96x6",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:18:52.331Z"
+    },
+    {
+      "id": "visit_1771175955242_9yo2qi",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:15.242Z"
+    },
+    {
+      "id": "visit_1771175957581_valr0o",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:17.581Z"
+    },
+    {
+      "id": "visit_1771175962652_7f4jlm",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:22.652Z"
+    },
+    {
+      "id": "visit_1771175965651_qs8v8s",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:25.651Z"
+    },
+    {
+      "id": "visit_1771175968157_g91jvs",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:28.157Z"
+    },
+    {
+      "id": "visit_1771175974374_nqtyvu",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:34.374Z"
+    },
+    {
+      "id": "visit_1771175977000_5b2jal",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:37.000Z"
+    },
+    {
+      "id": "visit_1771175995456_rzjog1",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:19:55.456Z"
+    },
+    {
+      "id": "visit_1771176881825_tk8nul",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:41.826Z"
+    },
+    {
+      "id": "visit_1771176883945_ylol2y",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:43.945Z"
+    },
+    {
+      "id": "visit_1771176886377_fkl53a",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:46.377Z"
+    },
+    {
+      "id": "visit_1771176888888_loh7w1",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:48.888Z"
+    },
+    {
+      "id": "visit_1771176892501_pjzekj",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:52.501Z"
+    },
+    {
+      "id": "visit_1771176895511_hz14k5",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:55.511Z"
+    },
+    {
+      "id": "visit_1771176897196_3j21yi",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:57.196Z"
+    },
+    {
+      "id": "visit_1771176899126_hthriu",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:34:59.126Z"
+    },
+    {
+      "id": "visit_1771176901295_nocpvj",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:01.295Z"
+    },
+    {
+      "id": "visit_1771176903525_tbsp6o",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:03.525Z"
+    },
+    {
+      "id": "visit_1771176905117_758x6l",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:05.117Z"
+    },
+    {
+      "id": "visit_1771176907195_zbnjpc",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:07.195Z"
+    },
+    {
+      "id": "visit_1771176916932_18rp3o",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:16.932Z"
+    },
+    {
+      "id": "visit_1771176919029_8t4bwj",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:19.029Z"
+    },
+    {
+      "id": "visit_1771176922751_pojw58",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:35:22.751Z"
+    },
+    {
+      "id": "visit_1771178073482_ct29bt",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:33.483Z"
+    },
+    {
+      "id": "visit_1771178075716_6ko9ya",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:35.716Z"
+    },
+    {
+      "id": "visit_1771178077419_pcqou2",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:37.419Z"
+    },
+    {
+      "id": "visit_1771178079929_v3o4sa",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:39.929Z"
+    },
+    {
+      "id": "visit_1771178084437_kxchnd",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:44.437Z"
+    },
+    {
+      "id": "visit_1771178088532_vy6tye",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:48.532Z"
+    },
+    {
+      "id": "visit_1771178090258_f7b72i",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:50.258Z"
+    },
+    {
+      "id": "visit_1771178092248_2ptqcv",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:52.248Z"
+    },
+    {
+      "id": "visit_1771178093934_ijhac7",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:53.934Z"
+    },
+    {
+      "id": "visit_1771178097106_6lt5as",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:57.106Z"
+    },
+    {
+      "id": "visit_1771178099943_br30di",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:54:59.943Z"
+    },
+    {
+      "id": "visit_1771178100083_bmahsb",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:55:00.083Z"
+    },
+    {
+      "id": "visit_1771178102202_95ff1x",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:55:02.202Z"
+    },
+    {
+      "id": "visit_1771178242130_hphm3z",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:22.130Z"
+    },
+    {
+      "id": "visit_1771178243013_u8cdcx",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:23.013Z"
+    },
+    {
+      "id": "visit_1771178245219_1wohis",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:25.219Z"
+    },
+    {
+      "id": "visit_1771178246578_jx61u9",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:26.578Z"
+    },
+    {
+      "id": "visit_1771178249087_6c3dax",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:29.087Z"
+    },
+    {
+      "id": "visit_1771178256013_89h1cc",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:36.013Z"
+    },
+    {
+      "id": "visit_1771178258064_0qdxv0",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:38.064Z"
+    },
+    {
+      "id": "visit_1771178279239_lbv2s4",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T17:57:59.239Z"
+    },
+    {
+      "id": "visit_1771178868569_9rh18q",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:48.569Z"
+    },
+    {
+      "id": "visit_1771178870724_iumroi",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:50.724Z"
+    },
+    {
+      "id": "visit_1771178872654_hilaew",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:52.654Z"
+    },
+    {
+      "id": "visit_1771178875162_7d9r0o",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:55.162Z"
+    },
+    {
+      "id": "visit_1771178876784_4zf9vd",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:56.784Z"
+    },
+    {
+      "id": "visit_1771178876819_4ibmw1",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:56.819Z"
+    },
+    {
+      "id": "visit_1771178878719_bn16ga",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-15T18:07:58.719Z"
+    },
+    {
+      "id": "visit_1771202377618_eecs6l",
+      "page": "page-index",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:37.619Z"
+    },
+    {
+      "id": "visit_1771202378667_vpt04n",
+      "page": "page-message",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:38.667Z"
+    },
+    {
+      "id": "visit_1771202381533_mv5kgh",
+      "page": "page-budget",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:41.533Z"
+    },
+    {
+      "id": "visit_1771202383748_kdt29l",
+      "page": "page-loading",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:43.748Z"
+    },
+    {
+      "id": "visit_1771202386255_tsetg7",
+      "page": "page-blindbox",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:46.255Z"
+    },
+    {
+      "id": "visit_1771202388575_599qf0",
+      "page": "page-reveal",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:48.575Z"
+    },
+    {
+      "id": "visit_1771202390849_3elyi4",
+      "page": "page-redirect",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referer": "http://localhost:8080/",
+      "ip": "::1",
+      "timestamp": "2026-02-16T00:39:50.850Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1771168143555_s3rnd2",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "timestamp": "2026-02-15T15:09:03.555Z"
+    },
+    {
+      "id": "msg_1771168499945_jtzthp",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "timestamp": "2026-02-15T15:14:59.945Z"
+    },
+    {
+      "id": "msg_1771168557696_5t64tt",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 150,
+      "timestamp": "2026-02-15T15:15:57.696Z"
+    },
+    {
+      "id": "msg_1771168593715_txvupt",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 10,
+      "timestamp": "2026-02-15T15:16:33.715Z"
+    },
+    {
+      "id": "msg_1771168604499_zq0rbu",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 30,
+      "timestamp": "2026-02-15T15:16:44.499Z"
+    },
+    {
+      "id": "msg_1771169386586_an753l",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 30,
+      "timestamp": "2026-02-15T15:29:46.586Z"
+    },
+    {
+      "id": "msg_1771169423997_9hn98s",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "timestamp": "2026-02-15T15:30:23.997Z"
+    },
+    {
+      "id": "msg_1771169451221_x6eml1",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "timestamp": "2026-02-15T15:30:51.221Z"
+    },
+    {
+      "id": "msg_1771169561712_ep0pgm",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "timestamp": "2026-02-15T15:32:41.712Z"
+    },
+    {
+      "id": "msg_1771174297609_cpa5sk",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "timestamp": "2026-02-15T16:51:37.609Z"
+    },
+    {
+      "id": "msg_1771174354057_25ft34",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "timestamp": "2026-02-15T16:52:34.057Z"
+    },
+    {
+      "id": "msg_1771174494588_k0we5b",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "timestamp": "2026-02-15T16:54:54.588Z"
+    },
+    {
+      "id": "msg_1771174524090_dikdi0",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 150,
+      "timestamp": "2026-02-15T16:55:24.090Z"
+    },
+    {
+      "id": "msg_1771174797782_zgxt54",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "timestamp": "2026-02-15T16:59:57.782Z"
+    },
+    {
+      "id": "msg_1771174893256_aphsou",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:01:33.256Z"
+    },
+    {
+      "id": "msg_1771175208576_c8s9s6",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:06:48.576Z"
+    },
+    {
+      "id": "msg_1771175236475_0ab9te",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:07:16.475Z"
+    },
+    {
+      "id": "msg_1771175433256_fp2me1",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:10:33.256Z"
+    },
+    {
+      "id": "msg_1771175465886_joh07y",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:11:05.886Z"
+    },
+    {
+      "id": "msg_1771175566531_hhbq8k",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 10,
+      "timestamp": "2026-02-15T17:12:46.531Z"
+    },
+    {
+      "id": "msg_1771175644635_ezk820",
+      "message": "愿你每天都被可爱包围，做个快乐的小仙女",
+      "budget": 30,
+      "timestamp": "2026-02-15T17:14:04.635Z"
+    },
+    {
+      "id": "msg_1771175921947_h9l42h",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 40,
+      "timestamp": "2026-02-15T17:18:41.947Z"
+    },
+    {
+      "id": "msg_1771175965637_vdud5z",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "timestamp": "2026-02-15T17:19:25.637Z"
+    },
+    {
+      "id": "msg_1771176886362_slmn83",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:34:46.362Z"
+    },
+    {
+      "id": "msg_1771178077415_v63y5f",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:54:37.415Z"
+    },
+    {
+      "id": "msg_1771178246570_6ems45",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "timestamp": "2026-02-15T17:57:26.570Z"
+    },
+    {
+      "id": "msg_1771178872650_pe5oqs",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "timestamp": "2026-02-15T18:07:52.650Z"
+    },
+    {
+      "id": "msg_1771202383739_06fw2f",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "timestamp": "2026-02-16T00:39:43.739Z"
+    }
+  ],
+  "selections": [
+    {
+      "id": "sel_1771168147877_d49trv",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "香薰蜡烛套装",
+      "giftPrice": 32,
+      "timestamp": "2026-02-15T15:09:07.877Z"
+    },
+    {
+      "id": "sel_1771168155800_ijch1z",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "暖手宝充电宝二合一",
+      "giftPrice": 33,
+      "timestamp": "2026-02-15T15:09:15.800Z"
+    },
+    {
+      "id": "sel_1771168160625_70rcfo",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "星空投影灯",
+      "giftPrice": 35,
+      "timestamp": "2026-02-15T15:09:20.625Z"
+    },
+    {
+      "id": "sel_1771168504193_dp9se8",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "创意手机支架",
+      "giftPrice": 18,
+      "timestamp": "2026-02-15T15:15:04.193Z"
+    },
+    {
+      "id": "sel_1771168515486_jiu903",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "迷你蓝牙音箱",
+      "giftPrice": 49,
+      "timestamp": "2026-02-15T15:15:15.486Z"
+    },
+    {
+      "id": "sel_1771168520726_53ebjk",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "数据线收纳盒",
+      "giftPrice": 22,
+      "timestamp": "2026-02-15T15:15:20.726Z"
+    },
+    {
+      "id": "sel_1771168562285_ramnba",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 150,
+      "selectedBox": "B",
+      "giftName": "复仇者联盟公仔套装",
+      "giftPrice": 58,
+      "timestamp": "2026-02-15T15:16:02.285Z"
+    },
+    {
+      "id": "sel_1771168613083_6kmx1o",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 30,
+      "selectedBox": "A",
+      "giftName": "英雄主题马克杯",
+      "giftPrice": 28,
+      "timestamp": "2026-02-15T15:16:53.083Z"
+    },
+    {
+      "id": "sel_1771169390682_8540xa",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 30,
+      "selectedBox": "A",
+      "giftName": "英雄主题马克杯",
+      "giftPrice": 28,
+      "timestamp": "2026-02-15T15:29:50.682Z"
+    },
+    {
+      "id": "sel_1771169428016_9ji8jz",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "星空投影灯",
+      "giftPrice": 35,
+      "timestamp": "2026-02-15T15:30:28.016Z"
+    },
+    {
+      "id": "sel_1771169455228_eagj62",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "selectedBox": "C",
+      "giftName": "羊绒围巾礼盒",
+      "giftPrice": 46,
+      "timestamp": "2026-02-15T15:30:55.228Z"
+    },
+    {
+      "id": "sel_1771169571792_f0o6nq",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "selectedBox": "B",
+      "giftName": "暖手宝充电宝二合一",
+      "giftPrice": 33,
+      "timestamp": "2026-02-15T15:32:51.792Z"
+    },
+    {
+      "id": "sel_1771169578347_ecpo7r",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "selectedBox": "A",
+      "giftName": "羊绒围巾礼盒",
+      "giftPrice": 46,
+      "timestamp": "2026-02-15T15:32:58.347Z"
+    },
+    {
+      "id": "sel_1771169583957_ssvzmk",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "selectedBox": "C",
+      "giftName": "保温杯礼盒",
+      "giftPrice": 39,
+      "timestamp": "2026-02-15T15:33:03.957Z"
+    },
+    {
+      "id": "sel_1771174304422_ztua2r",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "海贼王尼卡路飞手办",
+      "giftPrice": 22.44,
+      "timestamp": "2026-02-15T16:51:44.422Z"
+    },
+    {
+      "id": "sel_1771174318233_xkuj05",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "小黄人十二生肖摆件",
+      "giftPrice": 39,
+      "timestamp": "2026-02-15T16:51:58.233Z"
+    },
+    {
+      "id": "sel_1771174323258_5crt3y",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "自由女神手办",
+      "giftPrice": 10.17,
+      "timestamp": "2026-02-15T16:52:03.258Z"
+    },
+    {
+      "id": "sel_1771174330789_4oee3r",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "自由女神手办",
+      "giftPrice": 10.17,
+      "timestamp": "2026-02-15T16:52:10.789Z"
+    },
+    {
+      "id": "sel_1771174358148_kgyck9",
+      "message": "程序员男友生日，送他实用的数码好物",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "黑神话悟空手办盲盒",
+      "giftPrice": 24.8,
+      "timestamp": "2026-02-15T16:52:38.148Z"
+    },
+    {
+      "id": "sel_1771174498284_lkg2t6",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 150,
+      "selectedBox": "B",
+      "giftName": "招财猫十二生肖摆件",
+      "giftPrice": 24,
+      "timestamp": "2026-02-15T16:54:58.284Z"
+    },
+    {
+      "id": "sel_1771174529505_olk3ey",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 150,
+      "selectedBox": "A",
+      "giftName": "海贼王尼卡路飞手办",
+      "giftPrice": 22.44,
+      "timestamp": "2026-02-15T16:55:29.505Z"
+    },
+    {
+      "id": "sel_1771174817794_jd14ya",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "selectedBox": "B",
+      "giftName": "关节可动人偶手办",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:00:17.794Z"
+    },
+    {
+      "id": "sel_1771174959453_59d8wh",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "关节可动人偶手办",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:02:39.453Z"
+    },
+    {
+      "id": "sel_1771175215808_hmwdj1",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "招财猫十二生肖摆件",
+      "giftPrice": 24,
+      "timestamp": "2026-02-15T17:06:55.808Z"
+    },
+    {
+      "id": "sel_1771175243149_ko4z2n",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:07:23.149Z"
+    },
+    {
+      "id": "sel_1771175446426_qfeyas",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "timestamp": "2026-02-15T17:10:46.426Z"
+    },
+    {
+      "id": "sel_1771175573580_qpo0pe",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 10,
+      "selectedBox": "A",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.89,
+      "timestamp": "2026-02-15T17:12:53.580Z"
+    },
+    {
+      "id": "sel_1771175582279_7cyyno",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 10,
+      "selectedBox": "B",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:13:02.279Z"
+    },
+    {
+      "id": "sel_1771175669881_x1xelz",
+      "message": "愿你每天都被可爱包围，做个快乐的小仙女",
+      "budget": 30,
+      "selectedBox": "B",
+      "giftName": "恐龙模型玩具",
+      "giftPrice": 24.9,
+      "timestamp": "2026-02-15T17:14:29.881Z"
+    },
+    {
+      "id": "sel_1771175928498_t5k3bm",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 40,
+      "selectedBox": "B",
+      "giftName": "机甲人偶手办",
+      "giftPrice": 14.29,
+      "timestamp": "2026-02-15T17:18:48.498Z"
+    },
+    {
+      "id": "sel_1771175973572_3ix6s4",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 150,
+      "selectedBox": "A",
+      "giftName": "小黄人十二生肖摆件",
+      "giftPrice": 39,
+      "timestamp": "2026-02-15T17:19:33.572Z"
+    },
+    {
+      "id": "sel_1771176891701_618omy",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "机甲人偶手办",
+      "giftPrice": 14.29,
+      "timestamp": "2026-02-15T17:34:51.701Z"
+    },
+    {
+      "id": "sel_1771176896395_anffdb",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:34:56.395Z"
+    },
+    {
+      "id": "sel_1771176900493_0h0wkc",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.89,
+      "timestamp": "2026-02-15T17:35:00.493Z"
+    },
+    {
+      "id": "sel_1771176904315_5z6hed",
+      "message": "安慰最近失恋的闺蜜，想让她振作起来",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "机甲人偶手办",
+      "giftPrice": 14.29,
+      "timestamp": "2026-02-15T17:35:04.315Z"
+    },
+    {
+      "id": "sel_1771178083638_0lak7d",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:54:43.638Z"
+    },
+    {
+      "id": "sel_1771178089456_otut4o",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "A",
+      "giftName": "小黄人十二生肖摆件",
+      "giftPrice": 39,
+      "timestamp": "2026-02-15T17:54:49.456Z"
+    },
+    {
+      "id": "sel_1771178093130_rau4zl",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.89,
+      "timestamp": "2026-02-15T17:54:53.130Z"
+    },
+    {
+      "id": "sel_1771178099283_sl2nwn",
+      "message": "送给最温暖的TA，感谢一路陪伴",
+      "budget": 50,
+      "selectedBox": "C",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "timestamp": "2026-02-15T17:54:59.283Z"
+    },
+    {
+      "id": "sel_1771178255211_i6sy8o",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "海贼王尼卡路飞手办",
+      "giftPrice": 22.44,
+      "timestamp": "2026-02-15T17:57:35.211Z"
+    },
+    {
+      "id": "sel_1771178876020_2zbrxg",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "timestamp": "2026-02-15T18:07:56.020Z"
+    },
+    {
+      "id": "sel_1771202387775_6zl9b2",
+      "message": "我就是超人，为自己加油打气！",
+      "budget": 50,
+      "selectedBox": "B",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "timestamp": "2026-02-16T00:39:47.775Z"
+    }
+  ],
+  "clicks": [
+    {
+      "id": "click_1771168532151_t1kqpr",
+      "giftName": "数据线收纳盒",
+      "giftPrice": 22,
+      "keyword": "井然有序",
+      "timestamp": "2026-02-15T15:15:32.151Z"
+    },
+    {
+      "id": "click_1771168567581_avcit4",
+      "giftName": "复仇者联盟公仔套装",
+      "giftPrice": 58,
+      "keyword": "联盟荣耀",
+      "timestamp": "2026-02-15T15:16:07.581Z"
+    },
+    {
+      "id": "click_1771168616286_4fagu9",
+      "giftName": "英雄主题马克杯",
+      "giftPrice": 28,
+      "keyword": "英雄日常",
+      "timestamp": "2026-02-15T15:16:56.286Z"
+    },
+    {
+      "id": "click_1771169398698_ou131z",
+      "giftName": "英雄主题马克杯",
+      "giftPrice": 28,
+      "keyword": "英雄日常",
+      "timestamp": "2026-02-15T15:29:58.698Z"
+    },
+    {
+      "id": "click_1771169461706_8v9vwk",
+      "giftName": "羊绒围巾礼盒",
+      "giftPrice": 46,
+      "keyword": "温暖围绕",
+      "timestamp": "2026-02-15T15:31:01.706Z"
+    },
+    {
+      "id": "click_1771169590944_sn1bn2",
+      "giftName": "保温杯礼盒",
+      "giftPrice": 39,
+      "keyword": "暖心温度",
+      "timestamp": "2026-02-15T15:33:10.944Z"
+    },
+    {
+      "id": "click_1771174333684_b1jdhk",
+      "giftName": "自由女神手办",
+      "giftPrice": 10.17,
+      "keyword": "超人力量",
+      "timestamp": "2026-02-15T16:52:13.684Z"
+    },
+    {
+      "id": "click_1771174363791_h1y2lf",
+      "giftName": "黑神话悟空手办盲盒",
+      "giftPrice": 24.8,
+      "keyword": "解放双手",
+      "timestamp": "2026-02-15T16:52:43.791Z"
+    },
+    {
+      "id": "click_1771174504923_tr53wc",
+      "giftName": "招财猫十二生肖摆件",
+      "giftPrice": 24,
+      "keyword": "香氛浪漫",
+      "timestamp": "2026-02-15T16:55:04.923Z"
+    },
+    {
+      "id": "click_1771174535600_w0bxrb",
+      "giftName": "海贼王尼卡路飞手办",
+      "giftPrice": 22.44,
+      "keyword": "英雄日常",
+      "timestamp": "2026-02-15T16:55:35.600Z"
+    },
+    {
+      "id": "click_1771174822401_7fda7y",
+      "giftName": "关节可动人偶手办",
+      "giftPrice": 8.99,
+      "keyword": "星光守护",
+      "timestamp": "2026-02-15T17:00:22.401Z"
+    },
+    {
+      "id": "click_1771174962769_mv77ly",
+      "giftName": "关节可动人偶手办",
+      "giftPrice": 8.99,
+      "keyword": "星光守护",
+      "timestamp": "2026-02-15T17:02:42.769Z"
+    },
+    {
+      "id": "click_1771175218986_jj0700",
+      "giftName": "招财猫十二生肖摆件",
+      "giftPrice": 24,
+      "keyword": "温暖守护",
+      "timestamp": "2026-02-15T17:06:58.986Z"
+    },
+    {
+      "id": "click_1771175246094_058kvn",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "keyword": "香氛浪漫",
+      "timestamp": "2026-02-15T17:07:26.094Z"
+    },
+    {
+      "id": "click_1771175450314_ht2mbp",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "keyword": "超人力量",
+      "timestamp": "2026-02-15T17:10:50.314Z"
+    },
+    {
+      "id": "click_1771175587745_bzlaeh",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "keyword": "香氛浪漫",
+      "timestamp": "2026-02-15T17:13:07.745Z"
+    },
+    {
+      "id": "click_1771175673081_umg4j6",
+      "giftName": "恐龙模型玩具",
+      "giftPrice": 24.9,
+      "keyword": "创意无限",
+      "timestamp": "2026-02-15T17:14:33.081Z"
+    },
+    {
+      "id": "click_1771175932324_pmyqbq",
+      "giftName": "机甲人偶手办",
+      "giftPrice": 14.29,
+      "keyword": "暖心温度",
+      "timestamp": "2026-02-15T17:18:52.324Z"
+    },
+    {
+      "id": "click_1771175976993_jre945",
+      "giftName": "小黄人十二生肖摆件",
+      "giftPrice": 39,
+      "keyword": "星光守护",
+      "timestamp": "2026-02-15T17:19:36.993Z"
+    },
+    {
+      "id": "click_1771176907181_qky2iw",
+      "giftName": "机甲人偶手办",
+      "giftPrice": 14.29,
+      "keyword": "暖心温度",
+      "timestamp": "2026-02-15T17:35:07.181Z"
+    },
+    {
+      "id": "click_1771178102194_jo1zaj",
+      "giftName": "关节可动人偶 Dummy13",
+      "giftPrice": 8.99,
+      "keyword": "香氛浪漫",
+      "timestamp": "2026-02-15T17:55:02.194Z"
+    },
+    {
+      "id": "click_1771178258060_arh4ks",
+      "giftName": "海贼王尼卡路飞手办",
+      "giftPrice": 22.44,
+      "keyword": "联盟荣耀",
+      "timestamp": "2026-02-15T17:57:38.060Z"
+    },
+    {
+      "id": "click_1771178878705_ryjk8w",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "keyword": "超人力量",
+      "timestamp": "2026-02-15T18:07:58.705Z"
+    },
+    {
+      "id": "click_1771202390835_crzc89",
+      "giftName": "自由女神阿尼亚手办",
+      "giftPrice": 10.17,
+      "keyword": "超人力量",
+      "timestamp": "2026-02-16T00:39:50.835Z"
+    }
+  ]
+}
