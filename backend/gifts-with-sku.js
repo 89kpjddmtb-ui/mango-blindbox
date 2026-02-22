@@ -338,7 +338,7 @@ const giftDatabase = {
 module.exports = giftDatabase;
 
 function getJdPromotionUrl(sku, siteId = '4103347364') {
-  return ;
+  return `https://item.jd.com/${sku}.html`;
 }
 
 module.exports.getJdPromotionUrl = getJdPromotionUrl;
