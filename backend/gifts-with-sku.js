@@ -1,168 +1,111 @@
 // 礼物数据库 - 带京东 SKU
 // 每个礼物对应一个京东商品，点击时生成推广链接
+// 自动生成时间: 2026-02-22 21:37:49
 
 const giftDatabase = {
-  hero: [
+  tech: [
     {
-      name: '漫威钢铁侠手办',
-      desc: '正版授权，精致收藏级手办，漫威迷必备',
-      emoji: '🦸',
-      price: 45,
-      keyword: '英雄守护',
-      // 京东商品信息
-      jdSku: '100012043978',  // 示例SKU，需要替换为真实商品
-      jdPrice: 45,
-      commissionRate: 10  // 佣金比例 %
-    },
-    {
-      name: '超人披风毛毯',
-      desc: '柔软舒适法兰绒，盖上变身超级英雄',
-      emoji: '🦸‍♂️',
-      price: 38,
-      keyword: '超人力量',
-      jdSku: '100008348542',
-      jdPrice: 38,
-      commissionRate: 12
-    },
-    {
-      name: '英雄主题马克杯',
-      desc: '每天一杯，充满力量，办公室必备',
-      emoji: '☕',
-      price: 28,
-      keyword: '英雄日常',
-      jdSku: '100023456789',
-      jdPrice: 28,
-      commissionRate: 15
-    }
-  ],
-  warm: [
-    {
-      name: '星空投影灯',
-      desc: '浪漫星空氛围灯，卧室必备，送礼神器',
-      emoji: '✨',
-      price: 35,
-      keyword: '星光守护',
-      jdSku: '100014785236',
-      jdPrice: 35,
+      name: '珀芙研舒缓修护补水保湿等渗 敏感肌改善泛...',
+      desc: '精选好物，189.0元价位，佣金15.0%',
+      emoji: '🔊',
+      price: 189,
+      keyword: '珀芙研舒缓修护补水保',
+      jdSku: 'qu2SxeRbqrFXeNK1S7HrzvP0_3sdbAB0YmqekgZZjte',
+      jdPrice: 189,
       commissionRate: 15
     },
     {
-      name: '香薰蜡烛套装',
-      desc: '天然大豆蜡，舒缓身心，浪漫气息',
-      emoji: '🕯️',
-      price: 32,
-      keyword: '香氛浪漫',
-      jdSku: '100018965472',
-      jdPrice: 32,
-      commissionRate: 12
+      name: '超能泡洗粉去黄增白爆炸盐活氧&复合酶技术...',
+      desc: '精选好物，69.0元价位，佣金35.0%',
+      emoji: '🔊',
+      price: 69,
+      keyword: '超能泡洗粉去黄增白爆',
+      jdSku: 'wiGHlsPs4exhX909BXRXFeHJ_3as8HwTNt4lo9Erduf',
+      jdPrice: 69,
+      commissionRate: 35
     },
     {
-      name: '暖手宝充电宝二合一',
-      desc: '冬日温暖握在手心，还能给手机充电',
-      emoji: '🔥',
-      price: 33,
-      keyword: '温暖守护',
-      jdSku: '100021547896',
-      jdPrice: 33,
-      commissionRate: 10
-    }
-  ],
-  cute: [
+      name: '漫花山茶花400张大包纸巾抽纸家用面巾纸...',
+      desc: '精选好物，31.9元价位，佣金27.0%',
+      emoji: '🔊',
+      price: 31,
+      keyword: '漫花山茶花400张大',
+      jdSku: 'iwUlKesANSJnaoa3WnlDBkOT_3df4Tumn1NtFlPzjKg',
+      jdPrice: 31,
+      commissionRate: 27
+    },
     {
-      name: '芒果精灵玩偶',
-      desc: '超萌芒果造型，治愈系伙伴，女生最爱',
-      emoji: '🥭',
+      name: 'HERM'S三代山形刷头吸盘刷柄牙刷齿软...',
+      desc: '精选好物，36.9元价位，佣金30.0%',
+      emoji: '🔊',
       price: 36,
-      keyword: '萌力全开',
-      jdSku: '100025896347',
+      keyword: 'HERM'S三代山形',
+      jdSku: 'lx3PK9nVRXpoTkqIWW46iCai_3m8L815dnRLi2XcmHy',
       jdPrice: 36,
+      commissionRate: 30
+    },
+    {
+      name: '珀芙研舒缓保湿修护霜敏感肌保湿滋润次抛精...',
+      desc: '精选好物，89.9元价位，佣金15.0%',
+      emoji: '🔊',
+      price: 89,
+      keyword: '珀芙研舒缓保湿修护霜',
+      jdSku: '82IGIHaWmYDYD646s2KhAIGz_3klNf8XuMm0axA0Sp9',
+      jdPrice: 89,
       commissionRate: 15
     },
     {
-      name: '毛绒钥匙扣',
-      desc: '软萌挂件，随身携带，每天好心情',
-      emoji: '🧸',
-      price: 16,
-      keyword: '萌趣随行',
-      jdSku: '100028741596',
-      jdPrice: 16,
+      name: '小熊驾到速食意大利面  番茄肉酱意面方便...',
+      desc: '精选好物，36.8元价位，佣金20.0%',
+      emoji: '🔊',
+      price: 36,
+      keyword: '小熊驾到速食意大利面',
+      jdSku: 'JSbyCrzbZnDXuNdWjJ9fLdM7_cIOfgHrs8Ioh2GScsS',
+      jdPrice: 36,
       commissionRate: 20
     },
     {
-      name: '卡通发夹套装',
-      desc: '可爱造型，少女心爆棚，多种款式',
-      emoji: '🎀',
-      price: 15,
-      keyword: '甜美可爱',
-      jdSku: '100031254789',
-      jdPrice: 15,
-      commissionRate: 18
-    }
-  ],
-  tech: [
-    {
-      name: '迷你蓝牙音箱',
-      desc: '小巧便携，音质出色，桌面好物',
+      name: '钙尔奇金钙尔奇中老年成人补钙维d3片 补...',
+      desc: '精选好物，160.0元价位，佣金15.0%',
       emoji: '🔊',
-      price: 49,
-      keyword: '声动人心',
-      jdSku: '100034567891',
-      jdPrice: 49,
-      commissionRate: 10
-    },
-    {
-      name: '创意手机支架',
-      desc: '懒人神器，追剧必备，多档调节',
-      emoji: '📱',
-      price: 18,
-      keyword: '解放双手',
-      jdSku: '100037894561',
-      jdPrice: 18,
+      price: 160,
+      keyword: '钙尔奇金钙尔奇中老年',
+      jdSku: 'teKraJm7IckBTdx3CMj7iOKH_3hj3LwRzbI8GZaXKKE',
+      jdPrice: 160,
       commissionRate: 15
     },
     {
-      name: 'LED小夜灯',
-      desc: '智能感应，温馨守护，夜间好伴侣',
-      emoji: '💡',
-      price: 28,
-      keyword: '温暖微光',
-      jdSku: '100041237856',
-      jdPrice: 28,
-      commissionRate: 12
-    }
+      name: '冷酸灵泵式直立式海洋薄荷香型美白牙齿国货...',
+      desc: '精选好物，44.9元价位，佣金20.0%',
+      emoji: '🔊',
+      price: 44,
+      keyword: '冷酸灵泵式直立式海洋',
+      jdSku: 'KXejWC2cMv6ZvBIcAHNM9fP8_3KLpBNaQ0Mb2rhtC7y',
+      jdPrice: 44,
+      commissionRate: 20
+    },
+    {
+      name: '悦哺婴儿润肤乳宝宝保湿身体乳儿童滋润补水...',
+      desc: '精选好物，79.0元价位，佣金18.0%',
+      emoji: '🔊',
+      price: 79,
+      keyword: '悦哺婴儿润肤乳宝宝保',
+      jdSku: 'lx3PK9nVRXpoTkBllW46ieuD_3m8L815dnRLh9Ne5ny',
+      jdPrice: 79,
+      commissionRate: 18
+    },
+    {
+      name: '悦哺儿童面霜婴儿滋润保湿润肤霜 宝宝干燥...',
+      desc: '精选好物，138.0元价位，佣金18.0%',
+      emoji: '🔊',
+      price: 138,
+      keyword: '悦哺儿童面霜婴儿滋润',
+      jdSku: 'xlf4Wy4NtouvHKme8U6vdanq_364ty2PVEtYZ1xpH0T',
+      jdPrice: 138,
+      commissionRate: 18
+    },
   ],
-  warm: [
-    {
-      name: '暖手宝',
-      desc: '冬日温暖，握在手心',
-      emoji: '🔥',
-      price: 33,
-      keyword: '温暖守护',
-      jdSku: '100021547896',
-      jdPrice: 33,
-      commissionRate: 10
-    },
-    {
-      name: '羊绒围巾',
-      desc: '柔软亲肤，温暖如春',
-      emoji: '🧣',
-      price: 46,
-      keyword: '温暖围绕',
-      jdSku: '100044569823',
-      jdPrice: 46,
-      commissionRate: 8
-    },
-    {
-      name: '保温杯',
-      desc: '恒温守护，贴心陪伴',
-      emoji: '🥤',
-      price: 39,
-      keyword: '暖心温度',
-      jdSku: '100047896321',
-      jdPrice: 39,
-      commissionRate: 12
-    }
-  ]
+
 };
 
 module.exports = giftDatabase;
