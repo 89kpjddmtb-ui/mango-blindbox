@@ -2,7 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs').promises;
 const path = require('path');
-const { promotionLinks, getPromotionUrl } = require('./promotion-links');
+// 使用新的商品库 gifts-with-sku.js（包含动漫手办专区）
+const giftDatabase = require('./gifts-with-sku');
+const { getJdPromotionUrl } = require('./gifts-with-sku');
+
+// 为保持兼容性，创建 promotionLinks 别名
+const promotionLinks = giftDatabase;
+const getPromotionUrl = getJdPromotionUrl;
 const { generatePromotionLink, searchGoods } = require('./jd-union');
 
 const app = express();
@@ -133,7 +139,7 @@ app.get('/', (req, res) => {
 
 // ==================== 京东联盟配置（已移至 jd-union.js）====================
 
-// 获取礼物列表（带推广链接）
+// 获取礼物列表（带推广链接）- 提高hero分类权重
 app.get('/api/gifts', (req, res) => {
   const { category, budget } = req.query;
   
@@ -141,8 +147,43 @@ app.get('/api/gifts', (req, res) => {
   if (category && promotionLinks[category]) {
     gifts = promotionLinks[category];
   } else {
-    // 返回所有分类的礼物
-    gifts = Object.values(promotionLinks).flat();
+    // 加权随机选择：hero分类权重更高
+    // hero (手办/模型): 权重 3
+    // tech (车模): 权重 2  
+    // cute (萌趣): 权重 1
+    // warm (温暖): 权重 1
+    const weightedCategories = [
+      ...Array(3).fill('hero'),    // 手办/模型 - 高权重
+      ...Array(2).fill('tech'),    // 车模 - 中权重
+      'cute',                      // 萌趣 - 普通权重
+      'warm'                       // 温暖 - 普通权重
+    ];
+    
+    // 随机选择3个分类（可重复，提高hero出现概率）
+    const selectedCategories = [];
+    for (let i = 0; i < 3; i++) {
+      const randomCat = weightedCategories[Math.floor(Math.random() * weightedCategories.length)];
+      selectedCategories.push(randomCat);
+    }
+    
+    // 从选中的分类中各取1个商品
+    gifts = selectedCategories.map(cat => {
+      const catGifts = promotionLinks[cat] || [];
+      if (catGifts.length === 0) return null;
+      return catGifts[Math.floor(Math.random() * catGifts.length)];
+    }).filter(g => g !== null);
+    
+    // 如果不够3个，从所有商品中补充
+    if (gifts.length < 3) {
+      const allGifts = Object.values(promotionLinks).flat();
+      const shuffled = [...allGifts].sort(() => Math.random() - 0.5);
+      while (gifts.length < 3 && shuffled.length > 0) {
+        const g = shuffled.pop();
+        if (!gifts.includes(g)) {
+          gifts.push(g);
+        }
+      }
+    }
   }
   
   // 按预算筛选
@@ -150,9 +191,8 @@ app.get('/api/gifts', (req, res) => {
     gifts = gifts.filter(g => g.price <= parseInt(budget));
   }
   
-  // 随机打乱并取3个
-  const shuffled = [...gifts].sort(() => Math.random() - 0.5);
-  const selected = shuffled.slice(0, 3);
+  // 确保返回3个商品
+  const selected = gifts.slice(0, 3);
   
   res.json({
     success: true,
@@ -162,7 +202,7 @@ app.get('/api/gifts', (req, res) => {
       desc: g.desc,
       price: g.price,
       keyword: g.keyword,
-      sku: g.sku,
+      sku: g.jdSku || g.sku,
       image: g.image,
       emoji: g.emoji,
       boxNum: ['A', 'B', 'C'][index]
